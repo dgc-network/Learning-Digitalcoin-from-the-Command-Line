@@ -21,7 +21,7 @@ txconfirmtarget=1
 
 ## Create a Bare Bones Raw Transaction
 
-To use `fundrawtransaction` you first need to create a bare-bones raw transaction that lists _no_ inputs and _no_ change address. You'll just list your recipient and how much you want to send them, in this case `$recipient` and `0.0002` BTC.
+To use `fundrawtransaction` you first need to create a bare-bones raw transaction that lists _no_ inputs and _no_ change address. You'll just list your recipient and how much you want to send them, in this case `$recipient` and `0.0002` DGC.
 ```
 $ recipient=n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi
 $ unfinishedtx=$(digitalcoin-cli -named createrawtransaction inputs='''[]''' outputs='''{ "'$recipient'": 0.0002 }''')

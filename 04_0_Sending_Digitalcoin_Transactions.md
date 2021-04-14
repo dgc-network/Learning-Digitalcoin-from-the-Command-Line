@@ -1,6 +1,6 @@
 # Chapter Four: Sending Digitalcoin Transactions
 
-This chapter describes three different methods for sending bitcoins to normal P2PKH addresses from the command line, using only the digitalcoin-cli interface.
+This chapter describes three different methods for sending digitalcoins to normal P2PKH addresses from the command line, using only the digitalcoin-cli interface.
 
 ## Objectives for This Chapter
 

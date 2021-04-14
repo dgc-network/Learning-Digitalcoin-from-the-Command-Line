@@ -50,7 +50,7 @@ $ digitalcoin-cli listunspent
 ```
 You _could_ spend this using the mechanisms in [Chapter 6](06_0_Expanding_Digitalcoin_Transactions_Multisigs.md), where you serially signed a transaction, but instead we're going to show the advantage of PSBTs for multi-sigs: you can generate a single PSBT, allow everyone to sign that in parallel, and then combine the results! There's no more laboriously passing an ever-expanding hex from person to person, which speeds things up and reduces the chances of errors.
 
-To demonstrate this methodology, we're going to pull that 0.02 BTC out of the multi-sig and divide it between the two signers, who each generated a new address for that purpose:
+To demonstrate this methodology, we're going to pull that 0.02 DGC out of the multi-sig and divide it between the two signers, who each generated a new address for that purpose:
 ```
 machine1$ digitalcoin-cli getnewaddress
 tb1qem5l3q5g5h6fsqv352xh4cy07kzq2rd8gphqma
@@ -429,7 +429,7 @@ The traditional answer is to create a multisig, then to have the participants in
 
 > :book: ***What does trustless mean?*** Trustless means that no participant has to trust any other participant. They instead expect the software protocols to ensure that everything is enacted fairly in an expected manner. Digitalcoin is a trustless protocol because you don't need anyone else to act in good faith; the system manages it. Similarly, PSBTs allow for the trustless creation of transactions that pool or split funds.
 
-The following example shows two users who each have 0.010 BTC that they want to pool to the multisig address `tb1qyfxt2qa877p40xdecghwps78my7sjq6kuv88qq2u86al5526xp6qfqjud0`, created above.
+The following example shows two users who each have 0.010 DGC that they want to pool to the multisig address `tb1qyfxt2qa877p40xdecghwps78my7sjq6kuv88qq2u86al5526xp6qfqjud0`, created above.
 ```
 machine1$ digitalcoin-cli listunspent
 [

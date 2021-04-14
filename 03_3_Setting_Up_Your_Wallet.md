@@ -52,8 +52,8 @@ There are other sorts of Digitalcoin addresses, such as P2PK (which paid to a ba
 
 Sometimes you'll need to prove that you control a Digitalcoin address (or rather, that you control its private key). This is important because it lets people know that they're sending funds to the right person. This can be done by creating a signature with the `digitalcoin-cli signmessage` command, in the form `digitalcoin-cli signmessage [address] [message]`. For example:
 ```
-$ digitalcoin-cli signmessage "moKVV6XEhfrBCE3QCYq6ppT7AaMF8KsZ1B" "Hello, World"
-HyIP0nzdcH12aNbQ2s2rUxLwzG832HxiO1vt8S/jw+W4Ia29lw6hyyaqYOsliYdxne70C6SZ5Utma6QY/trHZBI=
+$ digitalcoin-cli signmessage "DEDuyjgsqH781c9RmucPKqdpS753ChNPbv" "Hello, World"
+H6iDyUEjVSgK/LqMCVFIqk+SIrI5pPO+c6ow6sSxytnTcDYKzVKTPKUjfT//oPofxZQc28Qv0YvJGcuzT1VwiC4=
 ```
 You'll get the signature as a return.
 
@@ -61,14 +61,14 @@ You'll get the signature as a return.
 
 Another person can then use the `digitalcoin-cli verifymessage` command to verify the signature. He inputs the address in question, the signature, and the message:
 ```
-$ digitalcoin-cli verifymessage "moKVV6XEhfrBCE3QCYq6ppT7AaMF8KsZ1B" "HyIP0nzdcH12aNbQ2s2rUxLwzG832HxiO1vt8S/jw+W4Ia29lw6hyyaqYOsliYdxne70C6SZ5Utma6QY/trHZBI=" "Hello, World"
+$ digitalcoin-cli verifymessage "DEDuyjgsqH781c9RmucPKqdpS753ChNPbv" "H6iDyUEjVSgK/LqMCVFIqk+SIrI5pPO+c6ow6sSxytnTcDYKzVKTPKUjfT//oPofxZQc28Qv0YvJGcuzT1VwiC4=" "Hello, World"
 true
 ```
 If they all match up, then the other person knows that he can safely transfer funds to the person who signed the message by sending to the address.
 
 If some black hat was making up signatures, this would instead produce a negative result:
 ```
-$ digitalcoin-cli verifymessage "FAKEV6XEhfrBCE3QCYq6ppT7AaMF8KsZ1B" "HyIP0nzdcH12aNbQ2s2rUxLwzG832HxiO1vt8S/jw+W4Ia29lw6hyyaqYOsliYdxne70C6SZ5Utma6QY/trHZBI=" "Hello, World"
+$ digitalcoin-cli verifymessage "FAKEV6XEhfrBCE3QCYq6ppT7AaMF8KsZ1B" "H6iDyUEjVSgK/LqMCVFIqk+SIrI5pPO+c6ow6sSxytnTcDYKzVKTPKUjfT//oPofxZQc28Qv0YvJGcuzT1VwiC4=" "Hello, World"
 error code: -3
 error message:
 Invalid address
@@ -96,7 +96,7 @@ Importing wallets is disabled when blocks are pruned
 
 ## Optional: View Your Private Keys
 
-Sometimes, you might want to actually look at the private keys associated with your Digitalcoin addresses. Perhaps you want to be able to sign a message or spend bitcoins from a different machine. Perhaps you just want to back up certain important private keys. You can also do this with your dump file, since it's human readable.
+Sometimes, you might want to actually look at the private keys associated with your Digitalcoin addresses. Perhaps you want to be able to sign a message or spend digitalcoins from a different machine. Perhaps you just want to back up certain important private keys. You can also do this with your dump file, since it's human readable.
 ```
 $ digitalcoin-cli dumpwallet ~/mywallet.txt
 {
@@ -105,14 +105,14 @@ $ digitalcoin-cli dumpwallet ~/mywallet.txt
 ```
 More likely, you just want to look at the private key associated with a specific address. This can be done with the `digitalcoin-cli dumpprivkey` command.
 ```
-$ digitalcoin-cli dumpprivkey "moKVV6XEhfrBCE3QCYq6ppT7AaMF8KsZ1B"
-cTv75T4B3NsG92tdSxSfzhuaGrzrmc1rJjLKscoQZXqNRs5tpYhH
+$ digitalcoin-cli dumpprivkey "DEDuyjgsqH781c9RmucPKqdpS753ChNPbv"
+KzFX9ukZsnwFpEcCrNaPCbJKUwmM1b4fzYjD6M3t7GHKMHALkAHS
 ```
 You can then save that key somewhere safe, preferably somewhere not connected to the internet.
 
 You can also import any private key, from a wallet dump or an individual key dump, as follows:
 ```
-$ digitalcoin-cli importprivkey cW4s4MdW7BkUmqiKgYzSJdmvnzq8QDrf6gszPMC7eLmfcdoRHtHh
+$ digitalcoin-cli importprivkey KzFX9ukZsnwFpEcCrNaPCbJKUwmM1b4fzYjD6M3t7GHKMHALkAHS
 ```
 Again, expect this to require an unpruned node. Expect this to take a while, as `digitalcoind` needs to reread all past transactions, to see if there are any new ones that it should pay attention to.
 

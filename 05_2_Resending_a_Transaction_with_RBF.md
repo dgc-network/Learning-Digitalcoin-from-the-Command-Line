@@ -77,7 +77,7 @@ Faced with this conflict, the miners will know to use the one with the higher fe
 
 In order to create an RBF transaction by hand, all you have to do is create a raw transaction that: (1) replaces a previous raw transaction that opted-in to RBF and that is not confirmed; (2) reuses one or more of the same UTXOs; (3) increases fees; and (4) pays the minimum bandwidth of both transactions [which already may be taken care of by (3)].
 
-The following example just reuses our existing variables, but decreases the amount sent to the change address, to increase the fee from the accidental 0 BTC of the original transaction to an overly generous 0.01 BTC in the new transaction:
+The following example just reuses our existing variables, but decreases the amount sent to the change address, to increase the fee from the accidental 0 DGC of the original transaction to an overly generous 0.01 DGC in the new transaction:
 ```
 $ rawtxhex=$(digitalcoin-cli -named createrawtransaction inputs='''[ { "txid": "'$utxo_txid'", "vout": '$utxo_vout', "sequence": 1 } ]''' outputs='''{ "'$recipient'": 0.000075, "'$changeaddress'": 0.00000001 }''')
 ```

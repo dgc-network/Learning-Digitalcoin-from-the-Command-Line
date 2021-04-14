@@ -160,11 +160,11 @@ You can look up funds without optional arguments using the `get_balance` functio
 
 ```rust
 let balance = rpc.get_balance(None, None).unwrap();
-println!("Balance: {:?} BTC", balance.as_btc());
+println!("Balance: {:?} DGC", balance.as_btc());
 ```
 As shown, the `as_btc()` function helps to output the balance in a readable form:
 ```
-Balance: 3433.71692741 BTC
+Balance: 3433.71692741 DGC
 ```
 
 ## Create an Address
@@ -195,7 +195,7 @@ You now have everything you need to create a transaction, which will be done in 
 
 ### 1. List UTXOs
 
-To start the creation of a transaction, you first find a UTXO to use. The following takes the first UTXO with at least 0.01 BTC
+To start the creation of a transaction, you first find a UTXO to use. The following takes the first UTXO with at least 0.01 DGC
 
 ```rust
 let unspent = rpc
@@ -306,7 +306,7 @@ warning: 1 warning emitted
 
     Finished dev [unoptimized + debuginfo] target(s) in 2.11s
      Running `target/debug/btc_test`
-Balance: 0.01031434 BTC
+Balance: 0.01031434 DGC
 address: tb1qx5jz36xgt9q2rkh4daee8ewfj0g5z05v8qsua2
 selected unspent transaction: ListUnspentResultEntry {
     txid: 84207ffec658ae29ad1fdd330d8a13613303c3cf281ce628fadeb7636ffb535e,

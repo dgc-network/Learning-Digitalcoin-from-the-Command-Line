@@ -48,14 +48,14 @@ if (argc != 3) {
 char *tx_recipient = argv[1];
 float tx_amount = atof(argv[2]);
 
-printf("Sending %4.8f BTC to %s\n",tx_amount,tx_recipient);
+printf("Sending %4.8f DGC to %s\n",tx_amount,tx_recipient);
 ```
 
 > :warning: **WARNING:** A real program would need much better sanitization of these variables. 
 
 ### Step 2: Set an Arbitrary Fee
 
-This example just an arbitrary0.0005 BTC fee to ensure that the test transactions goes through quickly:
+This example just an arbitrary0.0005 DGC fee to ensure that the test transactions goes through quickly:
 ```
 float tx_fee = 0.0005;
 float tx_total = tx_amount + tx_fee;
@@ -230,7 +230,7 @@ json_object_set(outputparams, tx_recipient, json_string(tx_amount_string));
 json_object_set(outputparams, changeaddress, json_string(tx_change_string));
 ```
 
-> :warning: **WARNING:** You might expect to input your Digitalcoin values as numbers, using `json_real`. Unfortunately, this exposes one of the major problems with integrating the `jansson` library and Digitalcoin. Digitalcoin is only valid to eight significant digits past the decimal point. You might recall that .00000001 BTC is a satoshi, and that's the smallest possible division of a Digitalcoin. Doubles in C offer more significant digits than that, though they're often imprecise out past eight decimals. If you try to convert straight from your double value in C (or a float value, for that matter) to a Digitalcoin value, the imprecision will often create a Digitalcoin value with more than eight significant digits. Before Digitalcoin Core 0.12 this appears to work, and you could use `json_real`. But as of Digitalcoin Core 0.12, if you try to give `createrawtransaction` a Digitalcoin value with too many significant digits, you'll instead get an error and the transaction will not be created. As a result, if the Digitalcoin value has _ever_ become a double or float, you must reformat it to eight significant digits past the digit before feeding it in as a string. This is obviously a kludge, so you should make sure it continues to work in future versions of Digitalcoin Core.
+> :warning: **WARNING:** You might expect to input your Digitalcoin values as numbers, using `json_real`. Unfortunately, this exposes one of the major problems with integrating the `jansson` library and Digitalcoin. Digitalcoin is only valid to eight significant digits past the decimal point. You might recall that .00000001 DGC is a satoshi, and that's the smallest possible division of a Digitalcoin. Doubles in C offer more significant digits than that, though they're often imprecise out past eight decimals. If you try to convert straight from your double value in C (or a float value, for that matter) to a Digitalcoin value, the imprecision will often create a Digitalcoin value with more than eight significant digits. Before Digitalcoin Core 0.12 this appears to work, and you could use `json_real`. But as of Digitalcoin Core 0.12, if you try to give `createrawtransaction` a Digitalcoin value with too many significant digits, you'll instead get an error and the transaction will not be created. As a result, if the Digitalcoin value has _ever_ become a double or float, you must reformat it to eight significant digits past the digit before feeding it in as a string. This is obviously a kludge, so you should make sure it continues to work in future versions of Digitalcoin Core.
 
 #### Step 6.3: Create the Parameter Array
 
@@ -340,7 +340,7 @@ You can see information on this transaction that we sent [here](https://live.blo
 
 ## Summary: Programming Digitalcoind with C
 
-With access to a C library, you can create much more fully featured programs than it was reasonable to do so with shell scripts. But, it can take a lot of work! Even at 316 lines of code, `sendtoaddress.c` doesn't cover nearly all of the intricacies requires to safely and intelligently transact bitcoins.
+With access to a C library, you can create much more fully featured programs than it was reasonable to do so with shell scripts. But, it can take a lot of work! Even at 316 lines of code, `sendtoaddress.c` doesn't cover nearly all of the intricacies requires to safely and intelligently transact digitalcoins.
 
 ## What's Next?
 

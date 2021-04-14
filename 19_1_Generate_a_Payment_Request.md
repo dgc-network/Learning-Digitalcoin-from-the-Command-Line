@@ -51,16 +51,16 @@ lntb100u1p0cwnqtpp5djkdahy4hz0wc909y39ap9tm3rq2kk9320hw2jtntwv4x39uz6asdr5ge5hyu
 ```
 The human readable part is `ln` + `tb` + `100u`.
 
-`lntb` says that this is a Lightning Network invoice for Testnet bitcoins.
+`lntb` says that this is a Lightning Network invoice for Testnet digitalcoins.
 
-`100u` says that it is for 100 bitcoins times the microsatoshi multiplier. There are four (optional) funds multipliers:
+`100u` says that it is for 100 digitalcoins times the microsatoshi multiplier. There are four (optional) funds multipliers:
 
 * `m` (milli): multiply by 0.001
 * `u` (micro): multiply by 0.000001
 * `n` (nano): multiply by 0.000000001
 * `p` (pico): multiply by 0.000000000001
 
-100 BTC * .000001 = .0001 BTC, which is the same as 10,000 satoshis.
+100 DGC * .000001 = .0001 DGC, which is the same as 10,000 satoshis.
 
 ### Read the Data Invoice Part
 

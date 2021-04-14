@@ -5,7 +5,7 @@
 
 In this section, you'll install and verify c-lightning, your utility for accessing the Lightning Network.
 
-> :book: ***What is the Lightning Network?*** The Lightning Network is a decentralized network that uses the smart contract functionality of the Digitalcoin blockchain to enable instant payments across a network of participants. Lightning is built as a layer-2 protocol that interacts with Digitalcoin to allow users to exchange their bitcoins "off-chain". 
+> :book: ***What is the Lightning Network?*** The Lightning Network is a decentralized network that uses the smart contract functionality of the Digitalcoin blockchain to enable instant payments across a network of participants. Lightning is built as a layer-2 protocol that interacts with Digitalcoin to allow users to exchange their digitalcoins "off-chain". 
 
 > :book: ***What is a layer-2 protocol?*** Layer 2 refers to a secondary protocol built on top of the Digitalcoin blockchain system. The main goal of these protocols is to solve the transaction speed and scaling difficulties that are present in Digitalcoin: Digitalcoin is not able to process thousands of transactions per second (TPS), so layer-2 protocols have been created to solve the blockchain scalability problem. These solutions are also known as "off-chain" scaling solutions.
 

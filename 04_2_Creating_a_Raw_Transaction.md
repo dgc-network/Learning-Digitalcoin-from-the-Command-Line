@@ -60,7 +60,7 @@ $ digitalcoin-cli listunspent
 ]
 
 ```
-This listing shows three different UTXOs, worth .0001, .0005 and .00022 BTC. Note that each has its own distinct txid and remains distinct in the wallet, even the last two, which were sent to the same address.
+This listing shows three different UTXOs, worth .0001, .0005 and .00022 DGC. Note that each has its own distinct txid and remains distinct in the wallet, even the last two, which were sent to the same address.
 
 When you want to spend a UTXO, it's not sufficient to just know the transaction id. That's because each transaction can have multiple outputs! Remember that first chunk of money that the faucet sent us? In the transaction, some money went to us and some went to someone else. The `txid` refers to the overall transaction, while a `vout` says which of multiple outputs you've received. In this list, each of these transactions is the 0th `vout` of a previous transaction, but _that doesn't have to be the case_.
 
@@ -70,13 +70,13 @@ So, txid+vout=UTXO. This will be the foundation of any raw transaction.
 
 You're now ready to write a simple, example raw transaction that shows how to send the entirety of a UTXO to another party. As noted, this is not necessarily a very realistic real-world case.
 
-> :warning: **WARNING:** It is very easy to lose money with a raw transaction. Consider all instructions on sending bitcoins via raw transactions to be _very_, _very_ dangerous. Whenever you're actually sending real money to other people, you should instead use one of the other methods explained in this chapter. Creating raw transactions is extremely useful if you're writing digitalcoin programs, but _only_ when you're writing digitalcoin programs. (For example: in writing this example for one version of this tutorial, we accidentally spent the wrong transaction, even though it had about 10x as much value. Almost all of that was lost to the miners.)
+> :warning: **WARNING:** It is very easy to lose money with a raw transaction. Consider all instructions on sending digitalcoins via raw transactions to be _very_, _very_ dangerous. Whenever you're actually sending real money to other people, you should instead use one of the other methods explained in this chapter. Creating raw transactions is extremely useful if you're writing digitalcoin programs, but _only_ when you're writing digitalcoin programs. (For example: in writing this example for one version of this tutorial, we accidentally spent the wrong transaction, even though it had about 10x as much value. Almost all of that was lost to the miners.)
 
 ### Prepare the Raw Transaction
 
 For best practices, we'll start out each transaction by carefully recording the txids and vouts that we'll be spending.
 
-In this case, we're going to spend the one worth .00050000 BTC because it's the only one with a decent value.
+In this case, we're going to spend the one worth .00050000 DGC because it's the only one with a decent value.
 ```
 $ utxo_txid="61f3b7016bf1ecc3987b8805207e79362e4de8026682e149107999b779426e3a"
 $ utxo_vout="1"
@@ -105,11 +105,11 @@ Each transaction has a fee associated with. It's _implicit_ when you send a raw 
 
 > :book: ***How much should you spend on transaction fees?*** [Digitalcoin Fees](https://bitcoinfees.21.co/) has a nice live assessment. It says that the "fastest and cheapest transaction fee is currently 42 satoshis/byte" and that "For the median transaction size of 224 bytes, this results in a fee of 9,408 satoshis".
 
-Currently Digitalcoin Fees suggests a transaction fee of about 10,000 satoshis, which is the same as .0001 BC. Yes, that's for the mainnet, not the testnet, but we want to test out things realistically, so that's what we're going to use.
+Currently Digitalcoin Fees suggests a transaction fee of about 10,000 satoshis, which is the same as .0001 DGC. Yes, that's for the mainnet, not the testnet, but we want to test out things realistically, so that's what we're going to use.
 
-In this case, that means taking the .0005 BTC in the UTXO we're selected, reducing it by .0001 BTC for the transaction fee, and sending the remaining .0004 BTC. (And this is an example of why micropayments don't work on the Digitalcoin network, because a $1 or so transaction fee is pretty expensive when you're sending $4, let alone if you were trying to make a micropayment of $0.50. But that's always why we have Lightning.)
+In this case, that means taking the .0005 DGC in the UTXO we're selected, reducing it by .0001 DGC for the transaction fee, and sending the remaining .0004 DGC. (And this is an example of why micropayments don't work on the Digitalcoin network, because a $1 or so transaction fee is pretty expensive when you're sending $4, let alone if you were trying to make a micropayment of $0.50. But that's always why we have Lightning.)
 
-> :warning: **WARNING:** The lower that you set your transaction fee, the longer before your transaction is built into a block. The Digitalcoin Fees site lists expected times, from an expected 0 blocks, to 22. Since blocks are built on average every 10 minutes, that's the difference between a few minutes and a few hours! So, choose a transaction fee that's appropriate for what you're sending. Note that you should never drop below the minimum relay fee, which is .0001 BTC.
+> :warning: **WARNING:** The lower that you set your transaction fee, the longer before your transaction is built into a block. The Digitalcoin Fees site lists expected times, from an expected 0 blocks, to 22. Since blocks are built on average every 10 minutes, that's the difference between a few minutes and a few hours! So, choose a transaction fee that's appropriate for what you're sending. Note that you should never drop below the minimum relay fee, which is .0001 DGC.
 
 ### Write the Raw Transaction
 

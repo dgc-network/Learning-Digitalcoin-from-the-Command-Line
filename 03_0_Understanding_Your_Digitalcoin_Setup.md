@@ -2,7 +2,7 @@
 
 You're now ready to begin working with the `digitalcoin-cli` command-line interface. But that first requires that you understand your Digitalcoin setup and its wallet features, which is what will be explained in this chapter.
 
-For this and future chapters, we presume that you have a VPS with Digitalcoin installed, running `digitalcoind`. We also presume that you are connected to testnet, allowing for access to bitcoins without using real funds. You can either do this with Digitalcoin Standup at Linode.com, per [§2.1: Setting up a Digitalcoin-Core VPS with Digitalcoin Standup](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md), or via other means, per [§2.2: Setting up a Digitalcoin-Core Machine via Other Means](02_2_Setting_Up_Digitalcoin_Core_Other.md).
+For this and future chapters, we presume that you have a VPS with Digitalcoin installed, running `digitalcoind`. We also presume that you are connected to testnet, allowing for access to digitalcoins without using real funds. You can either do this with Digitalcoin Standup at Linode.com, per [§2.1: Setting up a Digitalcoin-Core VPS with Digitalcoin Standup](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md), or via other means, per [§2.2: Setting up a Digitalcoin-Core Machine via Other Means](02_2_Setting_Up_Digitalcoin_Core_Other.md).
 
 ## Objectives for This Chapter
 

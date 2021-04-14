@@ -1,6 +1,6 @@
 # Interlude: Introducing Digitalcoin
 
-Before you can get started programming Digitalcoin (and Lightning), you should have a basic understanding of what they are and how they work. This section provides that overview. Many more definitions will appear within the document itself; this is only intended to lay the foundation.
+Before you can get started programming Digitalcoin, you should have a basic understanding of what they are and how they work. This section provides that overview. Many more definitions will appear within the document itself; this is only intended to lay the foundation.
 
 ## About Digitalcoin
 
@@ -10,9 +10,9 @@ Obviously, Digitalcoin is the heart of this book, but it's also the originator o
 
 **_How Are Coins Transferred?_** Digitalcoin currency isn't physical coins. Instead it's an endless series of ownership reassignments. When one person sends coins to another, that transfer is stored as a transaction. It's the transaction that actually records the ownership of the money, not any token local to the owner's wallet or their machine.
 
-**_Who Can You Send Coins To?_** The vast majority of digitalcoin transactions involve coins being sent to individual people (or at least to individual Digitalcoin addresses). However, more complex methodologies can be used to send bitcoins to groups of people or to scripts. These various methodologies have names like P2PKH, multisig, and P2SH.
+**_Who Can You Send Coins To?_** The vast majority of digitalcoin transactions involve coins being sent to individual people (or at least to individual Digitalcoin addresses). However, more complex methodologies can be used to send digitalcoins to groups of people or to scripts. These various methodologies have names like P2PKH, multisig, and P2SH.
 
-**_How Are Transactions Stored?_** Transactions are combined into larger blocks of data, which are then written to the blockchain ledger. A block is built in such a way that it cannot be replaced or rewritten once several blocks have been built atop (following) it. This is what makes bitcoins non-repudiable: the decentralized global ledger where everything is recorded is effectively a permanent and unchangeable database.
+**_How Are Transactions Stored?_** Transactions are combined into larger blocks of data, which are then written to the blockchain ledger. A block is built in such a way that it cannot be replaced or rewritten once several blocks have been built atop (following) it. This is what makes digitalcoins non-repudiable: the decentralized global ledger where everything is recorded is effectively a permanent and unchangeable database.
 
 However, the process of building these blocks is stochastic: it's somewhat random, so you can never be assured that a transaction will be placed in a specific block. There can also be changes in blocks if they're very recent, but only if they're _very_ recent. So, things become non-repudiable (and permanent and unchangeable) after a little bit of time.
 
@@ -88,7 +88,7 @@ One way to think of blockchain is: _a linked series of blocks of unchangeable da
 
 ## Is Blockchain Right for Me?
 
-If you want to transact bitcoins, then obviously Digitalcoin is right for you. However, more widely, blockchain has become a popular buzz-word even though it's not a magic bullet for all technical problems. With that said, there are many specific situations where blockchain is a superior technology.
+If you want to transact digitalcoins, then obviously Digitalcoin is right for you. However, more widely, blockchain has become a popular buzz-word even though it's not a magic bullet for all technical problems. With that said, there are many specific situations where blockchain is a superior technology.
 
 Blockchains probably _will_ be helpful if:
 
@@ -119,7 +119,7 @@ Do note that there may still be solutions for some of these situations within th
 
 ## About Lightning
 
-Lightning is a layer-2 protocol that interacts with Digitalcoin to allow users to exchange their bitcoins "off-chain". It has both advantages and disadvantages over using Digitalcoin on its own.
+Lightning is a layer-2 protocol that interacts with Digitalcoin to allow users to exchange their digitalcoins "off-chain". It has both advantages and disadvantages over using Digitalcoin on its own.
 
 Lightning is also the secondary focus of this tutorial. Though it's mostly about interacting directly with Digitalcoin (and the `digitalcoind`), it pays some attention to Lightning because it's an upcoming technology that is likely to become a popular alternative to Digitalcoin in the near future. This book takes the same approach to Lightning as to Digitalcoin: it teaches how to interact directly with a trusted Lightning daemon from the command line.
 
@@ -127,9 +127,9 @@ Unlike with Digitalcoin, there are actually several variants of Lightning. This 
 
 **_What is a Layer-2 Protocol?_** A layer-2 Digitalcoin protocol works on top of Digitalcoin. In this case, Lightning works atop Digitalcoin, interacting with it through smart contracts.
 
-**_What is a Lightning Channel?_** A Lightning Channel is a connection between two Lightning users. Each of the users locks up some number of bitcoins on the Digitalcoin blockchain using a multi-sig signed by both of them. The two users can then exchange bitcoins through their Lightning channel without ever writing to the Digitalcoin blockchain. Only when they want to close out their channel do they settle their bitcoins, based on the final division of coins.
+**_What is a Lightning Channel?_** A Lightning Channel is a connection between two Lightning users. Each of the users locks up some number of digitalcoins on the Digitalcoin blockchain using a multi-sig signed by both of them. The two users can then exchange digitalcoins through their Lightning channel without ever writing to the Digitalcoin blockchain. Only when they want to close out their channel do they settle their digitalcoins, based on the final division of coins.
 
-**_What is a Lightning Network?_** Putting together a number of Lightning Channels creates the Lightning Network. This allows two users who have not created a channel between themselves to exchange bitcoins using Lightning: the protocol forms a chain of Channels between the two users, then exchanges the coins through the chain using time-locked transactions.
+**_What is a Lightning Network?_** Putting together a number of Lightning Channels creates the Lightning Network. This allows two users who have not created a channel between themselves to exchange digitalcoins using Lightning: the protocol forms a chain of Channels between the two users, then exchanges the coins through the chain using time-locked transactions.
 
 **_What are the Advantages of Lightning?_** Lightning allows for faster transactions with lower fees. This creates the real possibility of digitalcoin-funded micropayments. It also offers better privacy, since it's off-chain with only the first and last states of the transaction being written to the immutable Digitalcoin ledger.
 
@@ -137,7 +137,7 @@ Unlike with Digitalcoin, there are actually several variants of Lightning. This 
 
 ### Lightning - In Short
 
-One way to think of Lightning is: _a way to transact bitcoins using off-chain channels between pairs of people, so that only a first and final state have to be written to the blockchain_.
+One way to think of Lightning is: _a way to transact digitalcoins using off-chain channels between pairs of people, so that only a first and final state have to be written to the blockchain_.
 
 ## Summary: Introducing Digitalcoin
 

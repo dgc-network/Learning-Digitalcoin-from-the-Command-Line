@@ -51,7 +51,7 @@ However, for HD wallets, each of those levels of the hierachy is used in a very 
 Altogether, a BIP32 derivation path is defined to have five levels:
 
 1. **Purpose.** This is usually set to `44'` or `84'`, depending on the BIP that is being followed.
-2. **Coin.** For Mainnet bitcoins, this is `0'`, for testnet it's `1'`.
+2. **Coin.** For Mainnet digitalcoins, this is `0'`, for testnet it's `1'`.
 3. **Account.** A wallet can contain multiple, discrete accounts, starting with `0'`.
 4. **Change.** External addresses (for distribution) are set to `0`, while internal addresses (for change) are set to `1`.
 5. **Index.** The nth address for the hierarchy, starting with `0`.

@@ -367,7 +367,7 @@ utxo_txid = selected_utxo['txid']
 utxo_vout = selected_utxo['vout']
 utxo_amt = float(selected_utxo['amount'])
 ```
-Next, you also retrieve the recipient address to which you want to send the bitcoins, calculate the amount of bitcoins you want to send, and calculate the miner fee and the change amount. Here, the amount is arbitrarily split in two and a miner fee is arbitrarily set.
+Next, you also retrieve the recipient address to which you want to send the digitalcoins, calculate the amount of digitalcoins you want to send, and calculate the miner fee and the change amount. Here, the amount is arbitrarily split in two and a miner fee is arbitrarily set.
 
 ```py
 recipient_address = new_address

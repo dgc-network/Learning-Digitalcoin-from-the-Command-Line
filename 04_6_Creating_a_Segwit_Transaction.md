@@ -281,7 +281,7 @@ There's really no complexity to creating SegWit transactions. Internally, they'r
 
 > :fire: ***What the power of sending coins with SegWit?***
 
-> _The Advantages._ SegWit transactions are smaller, and so will be cheaper to send than legacy transactions due to lower fees. Bech32 doubles down on this advantage, and also creates addresses that are harder to foul up when transcribing — and that's pretty important, given that user error is one of the most likely ways to lose your bitcoins.
+> _The Advantages._ SegWit transactions are smaller, and so will be cheaper to send than legacy transactions due to lower fees. Bech32 doubles down on this advantage, and also creates addresses that are harder to foul up when transcribing — and that's pretty important, given that user error is one of the most likely ways to lose your digitalcoins.
 
 > _The Disadvantages._ SegWit addresses may not be supported by obsolete Digitalcoin software. In particular, people may not be able to send to your Bech32 address.
 

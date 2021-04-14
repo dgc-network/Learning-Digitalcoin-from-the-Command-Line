@@ -184,20 +184,23 @@ $ digitalcoin-cli help getmininginfo
 ...
 Returns a json object containing mining-related information.
 Result:
-{                              (json object)
-  "blocks" : n,                (numeric) The current block
-  "currentblockweight" : n,    (numeric, optional) The block weight of the last assembled block (only present if a block was ever assembled)
-  "currentblocktx" : n,        (numeric, optional) The number of block transactions of the last assembled block (only present if a block was ever assembled)
-  "difficulty" : n,            (numeric) The current difficulty
-  "networkhashps" : n,         (numeric) The network hashes per second
-  "pooledtx" : n,              (numeric) The size of the mempool
-  "chain" : "str",             (string) current network name (main, test, regtest)
-  "warnings" : "str"           (string) any network and blockchain warnings
+{
+  "blocks": nnn,             (numeric) The current block
+  "currentblocksize": nnn,   (numeric) The last block size
+  "currentblocktx": nnn,     (numeric) The last block transaction
+  "difficulty": xxx.xxxxx    (numeric) The current difficulty
+  "errors": "..."          (string) Current errors
+  "genproclimit": n          (numeric) The processor limit for generation. -1 if no generation. (see getgenerate or setgenerate calls)
+  "networkhashps": n         (numeric) An estimate of the number of hashes per second the network is generating to maintain the current difficulty
+  "pooledtx": n              (numeric) The size of the mem pool
+  "testnet": true|false      (boolean) If using testnet or not
+  "chain": "xxxx",         (string) current network name as defined in BIP70 (main, test, regtest)
+  "generate": true|false     (boolean) If the generation is on or off (see getgenerate or setgenerate calls)
 }
 
 Examples:
 > digitalcoin-cli getmininginfo 
-> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getmininginfo", "params": []}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmininginfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:9998/
 ```
 > :book: ***What is RPC?*** `digitalcoin-cli` is just a handy interface that lets you send commands to the `digitalcoind`. More specifically, it's an interface that lets you send RPC (or Remote Procedure Protocol) commands to the `digitalcoind`. Often, the `digitalcoin-cli` command and the RPC command have identical names and interfaces, but some `digitalcoin-cli` commands instead provide shortcuts for more complex RPC requests. Generally, the `digitalcoin-cli` interface is much cleaner and simpler than trying to send RPC commands by hand, using `curl` or some other method. However, it also has limitations as to what you can ultimately do.
 
@@ -215,18 +218,14 @@ For example `digitalcoin-cli getnetworkinfo` gives you a variety of information 
 ```
 $ digitalcoin-cli getnetworkinfo
 {
-  "version": 200000,
-  "subversion": "/Satoshi:0.20.0/",
-  "protocolversion": 70015,
-  "localservices": "0000000000000408",
-  "localservicesnames": [
-    "WITNESS",
-    "NETWORK_LIMITED"
-  ],
+  "version": 5000300,
+  "subversion": "/Digitalcoin Core:5.0.3/",
+  "protocolversion": 70208,
+  "localservices": "0000000000000005",
   "localrelay": true,
   "timeoffset": 0,
   "networkactive": true,
-  "connections": 10,
+  "connections": 8,
   "networks": [
     {
       "name": "ipv4",
@@ -234,42 +233,26 @@ $ digitalcoin-cli getnetworkinfo
       "reachable": true,
       "proxy": "",
       "proxy_randomize_credentials": false
-    },
+    }, 
     {
       "name": "ipv6",
       "limited": false,
       "reachable": true,
       "proxy": "",
       "proxy_randomize_credentials": false
-    },
+    }, 
     {
       "name": "onion",
-      "limited": false,
-      "reachable": true,
-      "proxy": "127.0.0.1:9050",
-      "proxy_randomize_credentials": true
+      "limited": true,
+      "reachable": false,
+      "proxy": "",
+      "proxy_randomize_credentials": false
     }
   ],
   "relayfee": 0.00001000,
-  "incrementalfee": 0.00001000,
   "localaddresses": [
-    {
-      "address": "45.79.111.171",
-      "port": 18333,
-      "score": 1
-    },
-    {
-      "address": "2600:3c01::f03c:92ff:fecc:fdb7",
-      "port": 18333,
-      "score": 1
-    },
-    {
-      "address": "4wrr3ktm6gl4sojx.onion",
-      "port": 18333,
-      "score": 4
-    }
   ],
-  "warnings": "Warning: unknown new rules activated (versionbit 28)"
+  "warnings": ""
 }
 ```
 Feel free to reference any of these and to use "digitalcoin-cli help" if you want more information on what any of them do.

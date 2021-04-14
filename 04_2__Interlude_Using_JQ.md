@@ -145,16 +145,16 @@ $ digitalcoin-cli listunspent | jq -r '.[] | { txid: .txid, vout: .vout, amount:
 ```
 You could of course rename your new keys as you see fit. There's nothing magic in the original names:
 ```
-$ digitalcoin-cli listunspent | jq -r '.[] | { tx: .txid, output: .vout, bitcoins: .amount }'
+$ digitalcoin-cli listunspent | jq -r '.[] | { tx: .txid, output: .vout, digitalcoins: .amount }'
 {
   "tx": "ca4898d8f950df03d6bfaa00578bd0305d041d24788b630d0c4a32debcac9f36",
   "output": 0,
-  "bitcoins": 0.0001
+  "digitalcoins": 0.0001
 }
 {
   "tx": "91261eafae15ea53dedbea7c1db748c52bbc04a85859ffd0d839bda1421fda4c",
   "output": 0,
-  "bitcoins": 0.00022
+  "digitalcoins": 0.00022
 }
 ```
 ## Use JQ to Access JSON Objects by Looked-Up Value

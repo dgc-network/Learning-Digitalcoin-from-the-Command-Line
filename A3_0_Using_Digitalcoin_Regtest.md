@@ -54,11 +54,11 @@ $ digitalcoin-cli -regtest -generate 101
 
 > :warning: WARNING. Note that you must add the `-regtest` argument after each `digitalcoin-cli` command to correctly access your Regtest environment. If you prefer, you can include a `regtest=1` command in your `~/.digitalcoin/digitalcoin.conf` file.
 
-Because a block must have 100 confirmations before that reward can be spent, you generate 101 blocks, providing access to the coinbase transaction from block #1. Because this is a new blockchain using Digitalcoin’s default rules, the first blocks pay a block reward of 50 bitcoins. Unlike mainnet, in regtest mode only the first 150 blocks pay a reward of 50 bitcoins. The reward halves after 150 blocks, so it pays 25, 12.5, and so on...
+Because a block must have 100 confirmations before that reward can be spent, you generate 101 blocks, providing access to the coinbase transaction from block #1. Because this is a new blockchain using Digitalcoin’s default rules, the first blocks pay a block reward of 50 digitalcoins. Unlike mainnet, in regtest mode only the first 150 blocks pay a reward of 50 digitalcoins. The reward halves after 150 blocks, so it pays 25, 12.5, and so on...
 
 The output is the block hash of every block generated.
 
-> :book: ***What is a coinbase transaction?*** A coinbase is the inputless transaction created when a new block is mined and given to the miner. It's how new bitcoins enter the ecosystem. The value of coinbase transactions decay over time. On the mainnet, it halves every 210,000 transactions and ends entirely with the 6,929,999th block, which is currently predicted for the 22nd century. As of May 2020, the coinbase reward is 6.25 BTC.
+> :book: ***What is a coinbase transaction?*** A coinbase is the inputless transaction created when a new block is mined and given to the miner. It's how new digitalcoins enter the ecosystem. The value of coinbase transactions decay over time. On the mainnet, it halves every 210,000 transactions and ends entirely with the 6,929,999th block, which is currently predicted for the 22nd century. As of May 2020, the coinbase reward is 6.25 DGC.
 
 ### Verify Your Balance
 

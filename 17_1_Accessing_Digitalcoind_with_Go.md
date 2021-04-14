@@ -188,7 +188,7 @@ Due to limitations of the `btcd` `rpcclient`, you can't make a use of the ```get
 If you run [the src code](src/17_1_getbalance.go), you should get an output similar to this:
 ```
 $ go run getbalance.go 
-0.000689 BTC
+0.000689 DGC
 ```
 
 ## Create an Address
@@ -282,7 +282,7 @@ Only afterward do you use the `getreceivedbyaddress` RPC, on your decoded addres
 When you run [the code](src/17_1_getamountreceived.go), you should get output similar to:
 ```
 $ go run getamountreceived.go 
-0.0085 BTC
+0.0085 DGC
 ```
 
 ## Send a Transaction

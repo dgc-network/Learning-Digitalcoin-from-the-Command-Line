@@ -9,17 +9,17 @@ We suggest creating some aliases to make it easier to use Digitalcoin.
 You can do so by putting them in your `.bash_profile`, `.bashrc` or `.profile`.
 ```
 cat >> ~/.bash_profile <<EOF
-alias btcdir="cd ~/.digitalcoin/" #linux default digitalcoind path
-alias bc="digitalcoin-cli"
-alias bd="digitalcoind"
-alias btcinfo='digitalcoin-cli getwalletinfo | egrep "\"balance\""; digitalcoin-cli getnetworkinfo | egrep "\"version\"|connections"; digitalcoin-cli getmininginfo | egrep "\"blocks\"|errors"'
+alias dgcdir="cd ~/.digitalcoin/" #linux default digitalcoind path
+alias dc="digitalcoin-cli"
+alias dd="digitalcoind"
+alias dgcinfo='digitalcoin-cli getwalletinfo | egrep "\"balance\""; digitalcoin-cli getnetworkinfo | egrep "\"version\"|connections"; digitalcoin-cli getmininginfo | egrep "\"blocks\"|errors"'
 EOF
 ```
 After you enter these aliases you can either `source .bash_profile` to input them or just log out and back in.
 
 Note that these aliases includes shortcuts for running `digitalcoin-cli`, for running `digitalcoind`, and for going to the Digitalcoin directory. These aliases are mainly meant to make your life easier. We suggest you create other aliases to ease your use of frequent commands (and arguments) and to minimize errors. Aliases of this sort can be even more useful if you have a complex setup where you regularly run commands associated with Mainnet, with Testnet, _and_ with Regtest, as explained further below.
 
-With that said, use of these aliases in _this_ document might accidentally obscure the core lessons being taught about Digitalcoin, so the only alias directly used here is `btcinfo` because it encapsulatea  much longer and more complex command. Otherwise, we show the full commands; adjust for your own use as appropriate.
+With that said, use of these aliases in _this_ document might accidentally obscure the core lessons being taught about Digitalcoin, so the only alias directly used here is `dgcinfo` because it encapsulatea  much longer and more complex command. Otherwise, we show the full commands; adjust for your own use as appropriate.
 
 ## Run Digitalcoind
 
@@ -35,7 +35,7 @@ If it's not running, you'll want to run `/usr/local/bin/digitalcoind -daemon` by
 You should have the whole blockchain downloaded before you start playing. Just run the `digitalcoin-cli getblockcount` alias to see if it's all loaded. 
 ```
 $ digitalcoin-cli getblockcount
-1772384
+5068307
 ```
 That tells you what's loaded; you'll then need to check that against an online service that tells you the current block height.
 
@@ -46,10 +46,10 @@ You can do this by looking at a blocknet explorer, such as [the Blockcypher Test
 If you'd like an alias to look at everything at once, the following currently works for Testnet, but may disappear at some time in the future:
 ```
 $ cat >> ~/.bash_profile << EOF
-alias btcblock="echo \\\`digitalcoin-cli getblockcount 2>&1\\\`/\\\`wget -O - https://blockstream.info/testnet/api/blocks/tip/height 2> /dev/null | cut -d : -f2 | rev | cut -c 1- | rev\\\`"
+alias dgcblock="echo \\\`digitalcoin-cli getblockcount 2>&1\\\`/\\\`wget -O - https://blockstream.info/testnet/api/blocks/tip/height 2> /dev/null | cut -d : -f2 | rev | cut -c 1- | rev\\\`"
 EOF
 $ source .bash_profile 
-$ btcblock
+$ dgcblock
 1804372/1804372
 ```
 
@@ -74,21 +74,21 @@ However, if you want to run several different sorts of nodes simultaneously, you
 Here's a set of aliases that would make that easier by creating a specific alias for starting and stopping the digitalcoind, for going to the digitalcoin directory, and for running digitalcoin-cli, for each of the mainnet (which has no extra flags), the testnet (which is -testnet), or your regtest (which is -regtest).
 ```
 cat >> ~/.bash_profile <<EOF
-alias bcstart="digitalcoind -daemon"
-alias btstart="digitalcoind -testnet -daemon"
-alias brstart="digitalcoind -regtest -daemon"
+alias dcstart="digitalcoind -daemon"
+alias dtstart="digitalcoind -testnet -daemon"
+alias drstart="digitalcoind -regtest -daemon"
 
-alias bcstop="digitalcoin-cli stop"
-alias btstop="digitalcoin-cli -testnet stop"
-alias brstop="digitalcoin-cli -regtest stop"
+alias dcstop="digitalcoin-cli stop"
+alias dtstop="digitalcoin-cli -testnet stop"
+alias drstop="digitalcoin-cli -regtest stop"
 
-alias bcdir="cd ~/.digitalcoin/" #linux default digitalcoin path
-alias btdir="cd ~/.digitalcoin/testnet" #linux default digitalcoin testnet path
-alias brdir="cd ~/.digitalcoin/regtest" #linux default digitalcoin regtest path
+alias dcdir="cd ~/.digitalcoin/" #linux default digitalcoin path
+alias dtdir="cd ~/.digitalcoin/testnet" #linux default digitalcoin testnet path
+alias drdir="cd ~/.digitalcoin/regtest" #linux default digitalcoin regtest path
 
-alias bc="digitalcoin-cli"
-alias bt="digitalcoin-cli -testnet"
-alias br="digitalcoin-cli -regtest"
+alias dc="digitalcoin-cli"
+alias dt="digitalcoin-cli -testnet"
+alias dr="digitalcoin-cli -regtest"
 EOF
 ```
 For even more complexity, you could have each of your 'start' aliases use the -conf flag to load configuration from a different file. This goes far beyond the scope of this tutorial, but we offer it as a starting point for when your explorations of Digitalcoin reaches the next level.

@@ -477,7 +477,7 @@ Script:
 Running: <hashB> <hashA> OP_EQUAL
 Stack: [ True ]
 ```
-This is a nice script because it shows careful use of logic (with the `OP_NOT` and the `OP_VERIFY`) and good use of stack functions (with the `OP_SWAP`). It's all around a great example of a real-world function. And it is very real-world.  When [SHA-1 was broken](https://shattered.io/), 2.48 BTC were quickly liberated from the address, with a total value of about $3,000 at the time.
+This is a nice script because it shows careful use of logic (with the `OP_NOT` and the `OP_VERIFY`) and good use of stack functions (with the `OP_SWAP`). It's all around a great example of a real-world function. And it is very real-world.  When [SHA-1 was broken](https://shattered.io/), 2.48 DGC were quickly liberated from the address, with a total value of about $3,000 at the time.
 
 `btcdeb` can be run to prove the collision (and the script):
 ```

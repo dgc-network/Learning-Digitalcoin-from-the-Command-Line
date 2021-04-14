@@ -73,7 +73,7 @@ $ digitalcoin-cli listunspent
 ]
 
 ```
-In our example, we're going to send .009 BTC, which is (barely) larger than either of our UTXOs. This requires combining them, then using our change address to retrieve the unspent funds.
+In our example, we're going to send .009 DGC, which is (barely) larger than either of our UTXOs. This requires combining them, then using our change address to retrieve the unspent funds.
 
 ### Set Up Your Variables
 
@@ -100,7 +100,7 @@ Here's the example. Note the multiple inputs after the `inputs` arg and the mult
 ```
 $ rawtxhex2=$(digitalcoin-cli -named createrawtransaction inputs='''[ { "txid": "'$utxo_txid_1'", "vout": '$utxo_vout_1' }, { "txid": "'$utxo_txid_2'", "vout": '$utxo_vout_2' } ]''' outputs='''{ "'$recipient'": 0.009, "'$changeaddress'": 0.0009 }''')
 ```
-We were _very_ careful figuring out our money math. These two UTXOs contain 0.00999999 BTC. After sending 0.009 BTC, we'll have .00099999 BTC left. We chose .00009999 BTC the transaction fee. To accommodate that fee, we set our change to .0009 BTC. If we'd messed up our math and instead set our change to .00009 BTC, that additional BTC would be lost to the miners! If we'd forgot to make change at all, then the whole excess would have disappeared. So, again, _be careful_. 
+We were _very_ careful figuring out our money math. These two UTXOs contain 0.00999999 DGC. After sending 0.009 DGC, we'll have .00099999 DGC left. We chose .00009999 DGC the transaction fee. To accommodate that fee, we set our change to .0009 DGC. If we'd messed up our math and instead set our change to .00009 DGC, that additional DGC would be lost to the miners! If we'd forgot to make change at all, then the whole excess would have disappeared. So, again, _be careful_. 
 
 Fortunately, we can triple-check with the `btctxfee` alias from the JQ Interlude:
 ```
