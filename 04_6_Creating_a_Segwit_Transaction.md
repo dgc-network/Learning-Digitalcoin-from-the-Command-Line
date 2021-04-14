@@ -287,4 +287,4 @@ There's really no complexity to creating SegWit transactions. Internally, they'r
 
 ## What's Next?
 
-Advance through "digitalcoin-cli" with [Chapter Five: Controlling Digitalcoin Transactions](05_0_Controlling_Bitcoin_Transactions.md).
+Advance through "digitalcoin-cli" with [Chapter Five: Controlling Digitalcoin Transactions](05_0_Controlling_Digitalcoin_Transactions.md).

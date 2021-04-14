@@ -18,11 +18,11 @@ The operands of `OP_MULTISIG` are typically divided, with the `0` and the signat
 
 The requirement for that `0` as the first operand for `OP_CHECKMULTISIG` is a consensus rule. Because the original version of `OP_CHECKMULTISIG` accidentally popped an extra item off the stack, Digitalcoin must forever follow that standard, lest complex redemption scripts from that time period accidentally be broken, rendering old funds unredeemable. 
 
-> :book: ***What is a consensus rule?*** These are the rules that the Digitalcoin nodes follow to work together. In large part they're defined by the Digitalcoin Core code. These rules include lots of obvious mandates, such as the limit to how many Bitcoins are created for each block and the rules for how transactions may be respent. However, they also include fixes for bugs that have appeared over the years, because once a bug has been introduced into the Digitalcoin codebase, it must be continually supported, lest old Bitcoins become unspendable. 
+> :book: ***What is a consensus rule?*** These are the rules that the Digitalcoin nodes follow to work together. In large part they're defined by the Digitalcoin Core code. These rules include lots of obvious mandates, such as the limit to how many Digitalcoins are created for each block and the rules for how transactions may be respent. However, they also include fixes for bugs that have appeared over the years, because once a bug has been introduced into the Digitalcoin codebase, it must be continually supported, lest old Digitalcoins become unspendable. 
 
 ## Create a Raw Multisig 
 
-As discussed in [§10.1: Building a Digitalcoin Script with P2SH](10_1_Building_a_Bitcoin_Script_with_P2SH.md), multisigs are one of the standard Digitalcoin transaction types. A transaction can be created with a locking script that uses the raw `OP_CHECKMULTISIG` command, and it will be accepted into a block. This is the classic methodology for using multisigs in Digitalcoin.
+As discussed in [§10.1: Building a Digitalcoin Script with P2SH](10_1_Building_a_Digitalcoin_Script_with_P2SH.md), multisigs are one of the standard Digitalcoin transaction types. A transaction can be created with a locking script that uses the raw `OP_CHECKMULTISIG` command, and it will be accepted into a block. This is the classic methodology for using multisigs in Digitalcoin.
 
 As an example, we will revisit the multisig created in [§8.1](08_1_Sending_a_Transaction_to_a_Multisig.md) one final time and build a new locking script for it using this methodology. As you may recall, that was a 2-of-2 multisig built from `$address1` and `$address2`. 
 

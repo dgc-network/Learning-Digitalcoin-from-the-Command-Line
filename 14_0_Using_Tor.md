@@ -17,5 +17,5 @@ Supporting objectives include the ability to:
 ## Table of Contents
 
 * [Section One: Verifying Your Tor Setup](14_1_Verifying_Your_Tor_Setup.md)
-* [Section Two: Changing Your Digitalcoin Hidden Services](14_2_Changing_Your_Bitcoin_Hidden_Services.md)
+* [Section Two: Changing Your Digitalcoin Hidden Services](14_2_Changing_Your_Digitalcoin_Hidden_Services.md)
 * [Section Three: Adding SSH Hidden Services](14_3_Adding_SSH_Hidden_Services.md)

@@ -48,7 +48,7 @@ $ digitalcoin-cli listunspent
   }
 ]
 ```
-You _could_ spend this using the mechanisms in [Chapter 6](06_0_Expanding_Bitcoin_Transactions_Multisigs.md), where you serially signed a transaction, but instead we're going to show the advantage of PSBTs for multi-sigs: you can generate a single PSBT, allow everyone to sign that in parallel, and then combine the results! There's no more laboriously passing an ever-expanding hex from person to person, which speeds things up and reduces the chances of errors.
+You _could_ spend this using the mechanisms in [Chapter 6](06_0_Expanding_Digitalcoin_Transactions_Multisigs.md), where you serially signed a transaction, but instead we're going to show the advantage of PSBTs for multi-sigs: you can generate a single PSBT, allow everyone to sign that in parallel, and then combine the results! There's no more laboriously passing an ever-expanding hex from person to person, which speeds things up and reduces the chances of errors.
 
 To demonstrate this methodology, we're going to pull that 0.02 BTC out of the multi-sig and divide it between the two signers, who each generated a new address for that purpose:
 ```
@@ -57,7 +57,7 @@ tb1qem5l3q5g5h6fsqv352xh4cy07kzq2rd8gphqma
 machine2$ digitalcoin-cli getnewaddress
 tb1q3krplahg4ncu523m8h2eephjazs2hf6ur8r6zp
 ```
-The first thing we do is create a PSBT on the machine of our choice. (It doesn't matter which.) We need to use `createpsbt` from [§7.1](07_1_Creating_a_Partially_Signed_Bitcoin_Transaction.md) for this, not the simpler `walletcreatefundedpsbt`, because we need the extra control of selecting the money protected by the multi-sig. (This will be the case for all three examples in this section, which demonstrates why you usually need to use `createpsbt` for the complex stuff.)
+The first thing we do is create a PSBT on the machine of our choice. (It doesn't matter which.) We need to use `createpsbt` from [§7.1](07_1_Creating_a_Partially_Signed_Digitalcoin_Transaction.md) for this, not the simpler `walletcreatefundedpsbt`, because we need the extra control of selecting the money protected by the multi-sig. (This will be the case for all three examples in this section, which demonstrates why you usually need to use `createpsbt` for the complex stuff.)
 ```
 machine1$ utxo_txid=53ec62c5c2fe8b16ee2164e9699d16c7b8ac30ec53a696e55f09b79704b539b5
 machine1$ utxo_vout=0
@@ -590,7 +590,7 @@ The best way to manage a CoinJoin is to send out the base PSBT to all the partie
 
 ## Summary: Using a Partially Signed Digitalcoin Transaction
 
-You've now seen the PSBT process that you learned in [§7.1](07_1_Creating_a_Partially_Signed_Bitcoin_Transaction.md) in use in three real-life examples: creating a multi-sig, pooling funds, and CoinJoining. These were all theoretically possible in classic Digitalcoin by having multiple people sign carefully constructed transactions, but PSBTs make it standardized and simple.
+You've now seen the PSBT process that you learned in [§7.1](07_1_Creating_a_Partially_Signed_Digitalcoin_Transaction.md) in use in three real-life examples: creating a multi-sig, pooling funds, and CoinJoining. These were all theoretically possible in classic Digitalcoin by having multiple people sign carefully constructed transactions, but PSBTs make it standardized and simple.
 
 > :fire: ***What's the power of a PSBT?*** A PSBT allows for the creation of trustless transactions between multiple parties and multiple machines. If more than one party would need to fund a transaction, if more than one party would need to sign a transaction, or if a transaction needs to be created on one machine and signed on another, then a PSBT makes it simple without depending on the non-standardized partial signing mechanisms that used to exist before PSBT.
 

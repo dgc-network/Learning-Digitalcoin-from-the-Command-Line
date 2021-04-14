@@ -157,4 +157,4 @@ More complex multisignatures can typically be created by combining signatures or
 
 ## What's Next?
 
-Continue "Designing Real Digitalcoin Scripts" with [§13.3: Empowering Digitalcoin with Scripts](13_3_Empowering_Bitcoin_with_Scripts.md).
+Continue "Designing Real Digitalcoin Scripts" with [§13.3: Empowering Digitalcoin with Scripts](13_3_Empowering_Digitalcoin_with_Scripts.md).

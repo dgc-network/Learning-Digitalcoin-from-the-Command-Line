@@ -4,9 +4,9 @@
 
 The majority of this course presumes that you will either use the Mainnet or Testnet. However, those aren't the only choices. While developing Digitalcoin applications, you might want to keep your applications isolated from these public blockchains. To do so, you can create a blockchain from scratch using the Regtest, which has one other major advantage over Testnet: you choose when to create new blocks, so you have complete control over the environment.
 
-## Start Bitcoind on Regtest
+## Start Digitalcoind on Regtest
 
-After [setting up your Digitalcoin-Core VPS](02_0_Setting_Up_a_Bitcoin-Core_VPS.md) or [compiling from source](A2_0_Compiling_Bitcoin_from_Source.md), you are now able to use regtest. To start your `digitalcoind` on regtest and create a private Blockchain, use the following command:
+After [setting up your Digitalcoin-Core VPS](02_0_Setting_Up_a_Digitalcoin-Core_VPS.md) or [compiling from source](A2_0_Compiling_Digitalcoin_from_Source.md), you are now able to use regtest. To start your `digitalcoind` on regtest and create a private Blockchain, use the following command:
 ```
 $ digitalcoind -regtest -daemon -fallbackfee=1.0 -maxtxfee=1.1
 ```
@@ -25,7 +25,7 @@ user@mybtc:~/.digitalcoin# ls
 digitalcoin.conf  regtest  testnet3
 ```
 
-To start a brand new Blockchain using regtest, all you have to do is delete the `regtest` folder and restart the Bitcoind:
+To start a brand new Blockchain using regtest, all you have to do is delete the `regtest` folder and restart the Digitalcoind:
 ```
 $ rm -rf regtest
 ```
@@ -70,7 +70,7 @@ $ digitalcoin-cli -regtest getbalance
 
 ## Use the Regtest
 
-Now you should be able to use this balance for any type of interaction on your private Blockchain, such as sending Digitalcoin transactions according to [Chapter 4]((04_0_Sending_Bitcoin_Transactions.md)).
+Now you should be able to use this balance for any type of interaction on your private Blockchain, such as sending Digitalcoin transactions according to [Chapter 4]((04_0_Sending_Digitalcoin_Transactions.md)).
 
 It is important to note that for any transactions to complete, you will have to generate (mine) new blocks, so that the transactions can be included.
 
@@ -139,7 +139,7 @@ When you are on regtest, you are able to simulate edge cases and attacks that mi
 
 As discussed elsewhere in this course, using software libraries might give you more sophisticated access to some RPC commands. In this case, [bitcointest by dgarage](https://github.com/dgarage/bitcointest) for NodeJS can be used to simulate a transaction from one wallet to another; you can check [their guide](https://www.npmjs.com/package/bitcointest) for more specific attack simulations, such as double spend.
 
-See [§17.3](17_3_Accessing_Bitcoind_with_NodeJS.md) for the most up-to-date info on install NodeJS, then add `bitcointest`:
+See [§17.3](17_3_Accessing_Digitalcoind_with_NodeJS.md) for the most up-to-date info on install NodeJS, then add `bitcointest`:
 ```
 $ npm install -g bitcointest
 ```
@@ -148,9 +148,9 @@ After installing `bitcointest`, you can create a `test.js` file with the followi
 ```javascript
 file: test.js
 
-const { BitcoinNet, BitcoinGraph } = require('bitcointest');
-const net = new BitcoinNet('/usr/local/bin', '/tmp/bitcointest/', 22001, 22002);
-const graph = new BitcoinGraph(net);
+const { DigitalcoinNet, DigitalcoinGraph } = require('bitcointest');
+const net = new DigitalcoinNet('/usr/local/bin', '/tmp/bitcointest/', 22001, 22002);
+const graph = new DigitalcoinGraph(net);
 
 try {
 

@@ -39,4 +39,4 @@ You already spent a P2SH back in Chapter 6, when you resent a multsig transactio
 
 ## What's Next?
 
-Advance through "Digitalcoin Scripting" with [Chapter Eleven: Empowering Timelock with Digitalcoin Scripts](11_0_Empowering_Timelock_with_Bitcoin_Scripts.md).
+Advance through "Digitalcoin Scripting" with [Chapter Eleven: Empowering Timelock with Digitalcoin Scripts](11_0_Empowering_Timelock_with_Digitalcoin_Scripts.md).

@@ -146,4 +146,4 @@ We'll make real use of descriptors in [§7.3](07_3_Integrating_with_Hardware_Wal
 
 ## What's Next?
 
-Advance through "digitalcoin-cli" with [Chapter Four: Sending Digitalcoin Transactions](04_0_Sending_Bitcoin_Transactions.md).
+Advance through "digitalcoin-cli" with [Chapter Four: Sending Digitalcoin Transactions](04_0_Sending_Digitalcoin_Transactions.md).

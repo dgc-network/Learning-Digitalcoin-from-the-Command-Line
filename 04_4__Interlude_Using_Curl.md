@@ -114,7 +114,7 @@ $ curl --user StandUp:8eaf562eaf45c33c3328bc66008f2dd1 --data-binary '{"jsonrpc"
 {"result":{"blocks":1772428,"difficulty":10178811.40698772,"networkhashps":91963587385939.06,"pooledtx":61,"chain":"test","warnings":"Warning: unknown new rules activated (versionbit 28)"},"error":null,"id":"curltest"}```
 Note that we provided the method, `getmininginfo`, and the parameter, `[]`, but that everything else was the standard `curl` command line.
 ```
-> **WARNING:** If you get a result like "Failed to connect to 127.0.0.1 port 8332: Connection refused", be sure that a line like `rpcallowip=127.0.0.1` is in your ~/.digitalcoin/digitalcoin.conf. If things still don't work, be sure that you're allowing access to port 18332 (or 8332) from localhost. Our standard setup from [Chapter Two: Creating a Digitalcoin-Core VPS](02_0_Setting_Up_a_Bitcoin-Core_VPS.md) should do all of this.
+> **WARNING:** If you get a result like "Failed to connect to 127.0.0.1 port 8332: Connection refused", be sure that a line like `rpcallowip=127.0.0.1` is in your ~/.digitalcoin/digitalcoin.conf. If things still don't work, be sure that you're allowing access to port 18332 (or 8332) from localhost. Our standard setup from [Chapter Two: Creating a Digitalcoin-Core VPS](02_0_Setting_Up_a_Digitalcoin-Core_VPS.md) should do all of this.
 
 The result is another JSON array, which is unfortunately ugly to read if you're using `curl` by hand. Fortunately, you can clean it up  simply by piping it through `jq`:
 ```
@@ -299,7 +299,7 @@ $ curl --user StandUp:8eaf562eaf45c33c3328bc66008f2dd1 --data-binary '{"jsonrpc"
   "id": "curltest"
 }
 ```
-## Summary: Accessing Bitcoind with Curl
+## Summary: Accessing Digitalcoind with Curl
 
 Having finished this section, you may feel that accessing `digitalcoind` via `curl` is very much like accessing it through `digitalcoin-cli` ... but more cumbersome. And, you'd be right. `digitalcoin-cli` has pretty complete RPC functionality, so anything that you do through `curl` you can probably do through `digitalcoin-cli`. Which is why we're going to continue concentrating on `digitalcoin-cli` following this digression.
 

@@ -21,7 +21,7 @@ Note that these aliases includes shortcuts for running `digitalcoin-cli`, for ru
 
 With that said, use of these aliases in _this_ document might accidentally obscure the core lessons being taught about Digitalcoin, so the only alias directly used here is `btcinfo` because it encapsulatea  much longer and more complex command. Otherwise, we show the full commands; adjust for your own use as appropriate.
 
-## Run Bitcoind
+## Run Digitalcoind
 
 You'll begin your exploration of the Digitalcoin network with the `digitalcoin-cli` command. However, digitalcoind _must_ be running to use digitalcoin-cli, as digitalcoin-cli sends JSON-RPC commands to the digitalcoind. If you used our standard setup, digitalcoind should already be up and running. You can double check by looking at the process table.
 ```
@@ -99,4 +99,4 @@ Before you start playing with digitalcoin, you should make sure that your aliase
 
 ## What's Next?
 
-Continue "Understanding Your Digitalcoin Setup" with [§3.2: Knowing Your Digitalcoin Setup](03_2_Knowing_Your_Bitcoin_Setup.md).
+Continue "Understanding Your Digitalcoin Setup" with [§3.2: Knowing Your Digitalcoin Setup](03_2_Knowing_Your_Digitalcoin_Setup.md).

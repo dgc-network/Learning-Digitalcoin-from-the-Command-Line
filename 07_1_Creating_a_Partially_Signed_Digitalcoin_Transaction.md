@@ -23,7 +23,7 @@ In general, PSBTs provide a number of functional elements that improve this use 
 
 PSBTs do their work by supplementing normal transaction information with a set of inputs and outputs, each of which defines everything you need to know about those UTXOs, so that even an airgapped wallet can make an informed decision about signatures. Thus, an input lists out the amount of money in a UTXO and what needs to be done to spend it, while an output does the same for the UTXOs it's creating.
 
-This first section will outline the standard PSBT process of: Creator, Updater, Signer, Finalizer, Extractor. It'll do so from one machine, which will sort of make this look like a convoluted way to create a raw transaction. But, have faith, there's a purpose to this! [§7.2](07_2_Using_a_Partially_Signed_Bitcoin_Transaction.md) and [§7.3](/07_3_Integrating_with_Hardware_Wallets.md) will show some real-life examples of using PSBTs and will turn this simple system into a collaborative process shared between multiple machines that has real effects and creates real opportunities.
+This first section will outline the standard PSBT process of: Creator, Updater, Signer, Finalizer, Extractor. It'll do so from one machine, which will sort of make this look like a convoluted way to create a raw transaction. But, have faith, there's a purpose to this! [§7.2](07_2_Using_a_Partially_Signed_Digitalcoin_Transaction.md) and [§7.3](/07_3_Integrating_with_Hardware_Wallets.md) will show some real-life examples of using PSBTs and will turn this simple system into a collaborative process shared between multiple machines that has real effects and creates real opportunities.
 
 ## Create a PSBT the Old-Fashioned Way
 #### PSBT Role: Creator
@@ -506,4 +506,4 @@ Creating a PSBT involves a somewhat complex workflow of Creating, Updating, Sign
 
 ## What's Next?
 
-Continue "Expanding Digitalcoin Transactions with PSBTs" with [§7.2: Using a Partially Signed Digitalcoin Transaction](07_2_Using_a_Partially_Signed_Bitcoin_Transaction.md).
+Continue "Expanding Digitalcoin Transactions with PSBTs" with [§7.2: Using a Partially Signed Digitalcoin Transaction](07_2_Using_a_Partially_Signed_Digitalcoin_Transaction.md).

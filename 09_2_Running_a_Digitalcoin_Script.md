@@ -122,4 +122,4 @@ To process a Digitalcoin Script, a `scriptSig` is run followed by the `scriptPub
 
 ## What's Next?
 
-Continue "Introducing Digitalcoin Scripts" with [§9.3: Testing a Digitalcoin Script](09_3_Testing_a_Bitcoin_Script.md).
+Continue "Introducing Digitalcoin Scripts" with [§9.3: Testing a Digitalcoin Script](09_3_Testing_a_Digitalcoin_Script.md).

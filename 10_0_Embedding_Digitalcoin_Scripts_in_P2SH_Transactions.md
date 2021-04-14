@@ -20,7 +20,7 @@ Supporting objectives include the ability to:
 
 * [Section One: Understanding the Foundation of P2SH](10_1_Understanding_the_Foundation_of_P2SH.md)
 * [Section Two: Building the Structure of P2SH](10_2_Building_the_Structure_of_P2SH.md)  
-* [Section Three: Running a Digitalcoin Script with P2SH](10_3_Running_a_Bitcoin_Script_with_P2SH.md)
+* [Section Three: Running a Digitalcoin Script with P2SH](10_3_Running_a_Digitalcoin_Script_with_P2SH.md)
 * [Section Four: Scripting a Multisig](10_4_Scripting_a_Multisig.md)
 * [Section Five: Scripting a Segwit Script](10_5_Scripting_a_Segwit_Script.md)
 * [Section Six: Spending a P2SH Transaction](10_6_Spending_a_P2SH_Transaction.md)

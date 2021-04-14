@@ -2,11 +2,11 @@
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-One of the greatest powers of PSBTs is the ability to hand transactions off to hardware wallets. This will be a great development tool for you if you continue to program with Digitalcoin. However, you can't test it out now if you're using one of the configurations we suggest for this course — a VM on Linode per [§2.1](https://github.com/BlockchainCommons/Learning-Digitalcoin-from-the-Command-Line/blob/master/02_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md) or an even more farflung option such an AWS per [§2.2](https://github.com/BlockchainCommons/Learning-Digitalcoin-from-the-Command-Line/blob/master/02_2_Setting_Up_Bitcoin_Core_Other.md) — because obviously you won't have any way to hook a hardware wallet up to your remote, virtual machine.
+One of the greatest powers of PSBTs is the ability to hand transactions off to hardware wallets. This will be a great development tool for you if you continue to program with Digitalcoin. However, you can't test it out now if you're using one of the configurations we suggest for this course — a VM on Linode per [§2.1](https://github.com/BlockchainCommons/Learning-Digitalcoin-from-the-Command-Line/blob/master/02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md) or an even more farflung option such an AWS per [§2.2](https://github.com/BlockchainCommons/Learning-Digitalcoin-from-the-Command-Line/blob/master/02_2_Setting_Up_Digitalcoin_Core_Other.md) — because obviously you won't have any way to hook a hardware wallet up to your remote, virtual machine.
 
 >: ***What is a Hardware Wallet?*** A hardware wallet is an electronic device that improves the security of cryptocurrency by maintaing all the private keys on the device, rather than ever putting them on a computer directly connected to the internet. Hardware wallets have specific protocols for providing online interactions, usually managed by a program talking to the device through a USB port. In this chapter, we'll be managing a hardware wallet with `digitalcoin-cli` and the `hwy.py` program.
 
-You have three options for moving through this chapter on hardware wallets: (1) read along without testing the code; (2) install Digitalcoin on a local machine to fully test these commands; or (3) skip straight ahead to [Chapter 8: Expanding Digitalcoin Transactions in Other Ways](08_0_Expanding_Bitcoin_Transactions_Other.md). We suggest option #1, but if you really want to get your hands dirty we'll also give some support for #2 by talking about using a Macintosh (a hardware-platform supported by [Digitalcoin Standup](https://github.com/BlockchainCommons/Digitalcoin-Standup)) for testing.
+You have three options for moving through this chapter on hardware wallets: (1) read along without testing the code; (2) install Digitalcoin on a local machine to fully test these commands; or (3) skip straight ahead to [Chapter 8: Expanding Digitalcoin Transactions in Other Ways](08_0_Expanding_Digitalcoin_Transactions_Other.md). We suggest option #1, but if you really want to get your hands dirty we'll also give some support for #2 by talking about using a Macintosh (a hardware-platform supported by [Digitalcoin Standup](https://github.com/BlockchainCommons/Digitalcoin-Standup)) for testing.
 
 > :warning: **VERSION WARNING:** PSBTs are an innovation from Digitalcoin Core v 0.17.0. Earlier versions of Digitalcoin Core will not be able to work with the PSBT while it is in process (though they will still be able to recognize the final transaction). The HWI interface appeared in Digitalcoin Core v 0.18.0, but as long as you are using our suggested setup with Digitalcoin Standup, it should work.
 
@@ -34,7 +34,7 @@ Create an alias that runs `digitalcoin-cli` from the correct directory with any 
 
 Here's an example alias from a Mac:
 ```
-$ alias digitalcoin-cli="~/StandUp/BitcoinCore/digitalcoin-0.20.0/bin/digitalcoin-cli -testnet"
+$ alias digitalcoin-cli="~/StandUp/DigitalcoinCore/digitalcoin-0.20.0/bin/digitalcoin-cli -testnet"
 ```
 You'll note it not only gives us the full path, but also ensures that we stay on Testnet.
 
@@ -99,7 +99,7 @@ Again, we've included a reference to testnet in this alias.
 
 _We had to choose a hardware-wallet platform too, for this HWI demonstration. Our choice was the Ledger, which has long been our testbed for hardware wallets. Please see [HWI's device support info](https://github.com/digitalcoin-core/HWI/blob/master/README.md#device-support) for a list of other supported devices. If you use a device other than a Ledger, you'll need to assess your own solutions for preparing it for usage on the Testnet, but otherwise you should be able to continue with the course as written._
 
-If you are working with Bitcoins on your Ledger, you probably won't need to do anything. (But we don't suggest that for use with this course). 
+If you are working with Digitalcoins on your Ledger, you probably won't need to do anything. (But we don't suggest that for use with this course). 
 
 To work with Testnet coins, as suggested by this course, you'll need to make a few updates:
 
@@ -246,7 +246,7 @@ $ digitalcoin-cli -rpcwallet=ledger listunspent
 ```
 ## Create a Transaction with PSBT
 
-Watching and receiving payments is just half the battle. You may also want to make payments using accounts held by your hardware wallet. This is a the fourth real-life example for using PSBTs, per the process outlined in [§7.1: Creating a Partially Signed Digitalcoin Transaction](7_1_Creating_a_Partially_Signed_Bitcoin_Transaction.md). 
+Watching and receiving payments is just half the battle. You may also want to make payments using accounts held by your hardware wallet. This is a the fourth real-life example for using PSBTs, per the process outlined in [§7.1: Creating a Partially Signed Digitalcoin Transaction](7_1_Creating_a_Partially_Signed_Digitalcoin_Transaction.md). 
 
 The commands work exactly the same. In this case, use `walletcreatefundedpsbt` to form your PSBT because this is a situation where you don't care what UTXOs are used:
 ```
@@ -473,4 +473,4 @@ Hardware wallets can offer better protection by keeping your private keys offlin
 
 ## What's Next?
 
-Expand Digitalcoin Transactions more with [Chapter Eight: Expanding Digitalcoin Transactions in Other Ways](08_0_Expanding_Bitcoin_Transactions_Other.md).
+Expand Digitalcoin Transactions more with [Chapter Eight: Expanding Digitalcoin Transactions in Other Ways](08_0_Expanding_Digitalcoin_Transactions_Other.md).

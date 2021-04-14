@@ -11,7 +11,7 @@ The main directory just contains your config file and the testnet directory:
 $ ls ~/.digitalcoin
 digitalcoin.conf  testnet3
 ```
-The setup guides in [Chapter Two: Creating a Digitalcoin-Core VPS](02_0_Setting_Up_a_Bitcoin-Core_VPS.md) laid out a standardized config file. [§3.1: Verifying Your Digitalcoin Setup](03_1_Verifying_Your_Bitcoin_Setup.md) suggested how to change it to support more advanced setups. If you're interested in learning even more about the config file, you may wish to consult [Jameson Lopp's Digitalcoin Core Config Generator](https://jlopp.github.io/digitalcoin-core-config-generator/).
+The setup guides in [Chapter Two: Creating a Digitalcoin-Core VPS](02_0_Setting_Up_a_Digitalcoin-Core_VPS.md) laid out a standardized config file. [§3.1: Verifying Your Digitalcoin Setup](03_1_Verifying_Your_Digitalcoin_Setup.md) suggested how to change it to support more advanced setups. If you're interested in learning even more about the config file, you may wish to consult [Jameson Lopp's Digitalcoin Core Config Generator](https://jlopp.github.io/digitalcoin-core-config-generator/).
 
 Moving back to your ~/.digitalcoin directory, you'll find that the testnet3 directory contains all of the guts:
 ```

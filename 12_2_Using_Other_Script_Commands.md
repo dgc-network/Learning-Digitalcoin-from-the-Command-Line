@@ -82,4 +82,4 @@ Digitalcoin Script includes a wide array of arithemetic, stack, and cryptographi
 
 ## What's Next?
 
-Advance through "Digitalcoin Scripting" with [Chapter Thirteen: Designing Real Digitalcoin Scripts](13_0_Designing_Real_Bitcoin_Scripts.md).
+Advance through "Digitalcoin Scripting" with [Chapter Thirteen: Designing Real Digitalcoin Scripts](13_0_Designing_Real_Digitalcoin_Scripts.md).

@@ -2,7 +2,7 @@
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-P2PKHs are fine for explaining the fundamental way that Digitalcoin Scripts work, but what about native Segwit P2WPKH scripts, which are increasingly becoming the majority of Digitalcoin transactions? As it turns out, P2WPKH addresses don't use Digitalcoin Scripts like traditional Digitalcoin addresses do, and so this section is really a digression from the scripting of this chapter — but an important one, because it outlines the _other_ major way in which Bitcoins can be transacted. 
+P2PKHs are fine for explaining the fundamental way that Digitalcoin Scripts work, but what about native Segwit P2WPKH scripts, which are increasingly becoming the majority of Digitalcoin transactions? As it turns out, P2WPKH addresses don't use Digitalcoin Scripts like traditional Digitalcoin addresses do, and so this section is really a digression from the scripting of this chapter — but an important one, because it outlines the _other_ major way in which Digitalcoins can be transacted. 
 
 ## View a P2WPKH Script
 
@@ -116,4 +116,4 @@ When you're programming from the command line, you fundamentally don't have to w
 
 ## What's Next?
 
-Continue "Digitalcoin Scripting" with [Chapter 10: Embedding Digitalcoin Scripts in P2SH Transactions](10_0_Embedding_Bitcoin_Scripts_in_P2SH_Transactions.md).
+Continue "Digitalcoin Scripting" with [Chapter 10: Embedding Digitalcoin Scripts in P2SH Transactions](10_0_Embedding_Digitalcoin_Scripts_in_P2SH_Transactions.md).

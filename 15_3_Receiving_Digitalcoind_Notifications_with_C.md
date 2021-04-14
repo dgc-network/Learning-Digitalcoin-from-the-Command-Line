@@ -2,7 +2,7 @@
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-[§15.1](15_1_Accessing_Bitcoind_with_C.md) and [§15.2](15_2_Programming_Bitcoind_with_C.md) introduced RPC and JSON libraries for C, and in doing so showed one of the advantages of accessing Digitalcoin's RPC commands through a programming language: the ability to reasonably create much more complex programs. This chapter introduces a third library, for [ZMQ](http://zeromq.org/), and in doing so reveals another advantage: the ability to monitor for notifications. It will use that for coding a blockchain listener.
+[§15.1](15_1_Accessing_Digitalcoind_with_C.md) and [§15.2](15_2_Programming_Digitalcoind_with_C.md) introduced RPC and JSON libraries for C, and in doing so showed one of the advantages of accessing Digitalcoin's RPC commands through a programming language: the ability to reasonably create much more complex programs. This chapter introduces a third library, for [ZMQ](http://zeromq.org/), and in doing so reveals another advantage: the ability to monitor for notifications. It will use that for coding a blockchain listener.
 
 > :book: ***What is ZMQ?*** ZeroMQ (ZMQ)is a high-performance asynchronous messaging library that provides a message queue.  ZeroMQ supports common messaging patterns (pub/sub, request/reply, client/server, and others) over a variety of transports (TCP, in-process, inter-process, multicast, WebSocket, and more), making inter-process messaging as simple as inter-thread messaging. You can find more details about ZMQ notifications and others kind of messages in [this repo](https://github.com/Actinium-project/ChainTools/blob/master/docs/chainlistener.md).
 
@@ -143,7 +143,7 @@ No: 70
 .......
 ```
 
-### Summary Receiving Bitcoind Notifications with C.md
+### Summary Receiving Digitalcoind Notifications with C.md
 
 By using the ZMQ framework, you can easily receive notifications by subscribing to a connection point exposed by `digitalcoind` through its configuration file.
 

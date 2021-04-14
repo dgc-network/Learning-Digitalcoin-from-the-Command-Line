@@ -1,6 +1,6 @@
 # 10.3: Running a Digitalcoin Script with P2SH
 
-Now that you know the theory and practice behind P2SH addresses, you're ready to turn a non-standard Digitalcoin Script into an actual transaction. We'll be reusing the simple locking script from [§9.2: Running a Digitalcoin Script](09_2_Running_a_Bitcoin_Script.md), `OP_ADD 99 OP_EQUAL`.
+Now that you know the theory and practice behind P2SH addresses, you're ready to turn a non-standard Digitalcoin Script into an actual transaction. We'll be reusing the simple locking script from [§9.2: Running a Digitalcoin Script](09_2_Running_a_Digitalcoin_Script.md), `OP_ADD 99 OP_EQUAL`.
 
 ## Create a P2SH Transaction
 

@@ -301,7 +301,7 @@ c$ lightning-cli --testnet listconfigs
    "wumbo": false,
    "wumbo": false,
    "rgb": "03fce2",
-   "alias": "learningBitcoin",
+   "alias": "learningDigitalcoin",
    "pid-file": "/home/user/.lightning/lightningd-testnet.pid",
    "ignore-fee-limits": false,
    "watchtime-blocks": 144,

@@ -142,7 +142,7 @@ It's especially helpful for checking your work when you're serializing.
 
 ## Serialize a Locking Script the Easy Way
 
-When you installed `btcdeb` in [§9.3](09_3_Testing_a_Bitcoin_Script.md) you also installed `btcc` which can be used to serialize Digitalcoin scripts:
+When you installed `btcdeb` in [§9.3](09_3_Testing_a_Digitalcoin_Script.md) you also installed `btcc` which can be used to serialize Digitalcoin scripts:
 ```
 $ btcc 2 02da2f10746e9778dd57bd0276a4f84101c4e0a711f9cfd9f09cde55acbdd2d191 02bfde48be4aa8f4bf76c570e98a8d287f9be5638412ab38dede8e78df82f33fa3 2 OP_CHECKMULTISIG
 warning: ambiguous input 2 is interpreted as a numeric value; use OP_2 to force into opcode
@@ -177,4 +177,4 @@ Actually creating the P2SH locking script dives further into the guts of Digital
 
 ## What's Next?
 
-Continue "Embedding Digitalcoin Scripts" with [§10.3: Running a Digitalcoin Script with P2SH](10_3_Running_a_Bitcoin_Script_with_P2SH.md).
+Continue "Embedding Digitalcoin Scripts" with [§10.3: Running a Digitalcoin Script with P2SH](10_3_Running_a_Digitalcoin_Script_with_P2SH.md).

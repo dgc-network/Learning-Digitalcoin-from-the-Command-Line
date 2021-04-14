@@ -4,7 +4,7 @@ The foundation of Digitalcoin is the ability to protect transactions, something 
 
 ## Know the Parts of the Cryptographic Puzzle
 
-As described in [Chapter 1](01_0_Introducing_Bitcoin.md), the funds in each Digitalcoin transaction are locked with a cryptographic puzzle. To be precise, we said that Digitalcoin is made up of "a sequence of atomic transactions". We noted that: "Each transaction is authenticated by a sender with the solution to a previous cryptographic puzzle that was stored as a script. The new transaction is locked for the recipient with a new cryptographic puzzle that is also stored as a script." Those scripts, which lock and unlock transactions, are written in Digitalcoin Script.
+As described in [Chapter 1](01_0_Introducing_Digitalcoin.md), the funds in each Digitalcoin transaction are locked with a cryptographic puzzle. To be precise, we said that Digitalcoin is made up of "a sequence of atomic transactions". We noted that: "Each transaction is authenticated by a sender with the solution to a previous cryptographic puzzle that was stored as a script. The new transaction is locked for the recipient with a new cryptographic puzzle that is also stored as a script." Those scripts, which lock and unlock transactions, are written in Digitalcoin Script.
 
 > :book: ***What is Digitalcoin Script?*** Digitalcoin Script is a stack-based Forth-like language that purposefully avoids loops and so is not Turing-complete. It's made up of individual opcodes. Every single transaction in Digitalcoin is locked with a Digitalcoin Script; when the locking transaction for a UTXO is run with the correct inputs, that UTXO can then be spent.
 
@@ -139,4 +139,4 @@ Every Digitalcoin transaction includes at least one unlocking script (`scriptSig
 
 ## What's Next?
 
-Continue "Introducing Digitalcoin Scripts" with [§9.2: Running a Digitalcoin Script](09_2_Running_a_Bitcoin_Script.md).
+Continue "Introducing Digitalcoin Scripts" with [§9.2: Running a Digitalcoin Script](09_2_Running_a_Digitalcoin_Script.md).

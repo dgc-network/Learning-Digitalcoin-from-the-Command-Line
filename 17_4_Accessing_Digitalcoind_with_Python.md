@@ -1,8 +1,8 @@
-# 17.4: Accessing Bitcoind with Python
+# 17.4: Accessing Digitalcoind with Python
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-This section explains how to interact with `digitalcoind` using the Python programming language and the [Python-BitcoinRPC](https://github.com/jgarzik/python-bitcoinrpc).
+This section explains how to interact with `digitalcoind` using the Python programming language and the [Python-DigitalcoinRPC](https://github.com/jgarzik/python-bitcoinrpc).
 
 ## Set Up Python
 
@@ -13,9 +13,9 @@ You can check this by running:
 
 If it returns a version number (e.g., `3.7.3` or `3.8.3`) then you have python3 installed. 
 
-However, if you somehow do not have Python installed, you'll need build it from source as follows. Please see the ["Building Python from Source"](17_4_Accessing_Bitcoind_with_Python.md#variant-build-python-from-source) variant before continuing.
+However, if you somehow do not have Python installed, you'll need build it from source as follows. Please see the ["Building Python from Source"](17_4_Accessing_Digitalcoind_with_Python.md#variant-build-python-from-source) variant before continuing.
 
-### Set Up BitcoinRPC
+### Set Up DigitalcoinRPC
 
 Whether you used an existing Python or built it from source, you're now ready to install  the `python-bitcoinrpc` library:
 
@@ -28,7 +28,7 @@ $ sudo apt install python3-pip
 ```
 (Then repeat the `pip3 install python-bitcoinrpc` instructions.)
 
-### Create a BitcoinRPC Project
+### Create a DigitalcoinRPC Project
 
 You'll generally need to include appropriate declarations from `bitcoinrpc` in your Digitalcoin projects in Python. The following will give you access to the RPC based commands:
 ```py
@@ -49,7 +49,7 @@ You are now ready to start interacting with `digitalcoind` by establishing a con
 
 ```py
 logging.basicConfig()
-logging.getLogger("BitcoinRPC").setLevel(logging.DEBUG)
+logging.getLogger("DigitalcoinRPC").setLevel(logging.DEBUG)
 # rpc_user and rpc_password are set in the digitalcoin.conf file
 rpc_user = "StandUp"
 rpc_pass = "6305f1b2dbb3bc5a16cd0f4aac7e1eba"
@@ -79,8 +79,8 @@ print("---------------------------------------------------------------\n")
 You should see the following output with `logging` enabled :
 
 ```sh
-DEBUG:BitcoinRPC:-3-> getblockcount []
-DEBUG:BitcoinRPC:<-3- 1773020
+DEBUG:DigitalcoinRPC:-3-> getblockcount []
+DEBUG:DigitalcoinRPC:<-3- 1773020
 ---------------------------------------------------------------
 Block Count: 1773020
 ---------------------------------------------------------------
@@ -451,17 +451,17 @@ Signed Transaction:
 TXID of sent transaction:  187f8baa222f9f37841d966b6bad59b8131cfacca861cbe9bfc8656bd16a44cc
 ```
 
-## Summary: Accessing  Bitcoind with Python
+## Summary: Accessing  Digitalcoind with Python
 
-Accessing Bitcoind with Python is very easy while using the `python-bitcoinrpc` library. The first thing to always do is to establish a connection with your `digitalcoind` instance, then you can call all of the digitalcoin API calls as described in the digitalcoin-core documentation. This makes it easy to create small or large prorgrams to manage your own node, check balances, or create cool applications on top, as you access the full power of `digitalcoin-cli`.
+Accessing Digitalcoind with Python is very easy while using the `python-bitcoinrpc` library. The first thing to always do is to establish a connection with your `digitalcoind` instance, then you can call all of the digitalcoin API calls as described in the digitalcoin-core documentation. This makes it easy to create small or large prorgrams to manage your own node, check balances, or create cool applications on top, as you access the full power of `digitalcoin-cli`.
 
 ## What's Next?
 
-Learn more about "Talking to Digitalcoin in Other Languages" in [17.5: Accessing Digitalcoin with Rust](17_5_Accessing_Bitcoind_with_Rust.md).
+Learn more about "Talking to Digitalcoin in Other Languages" in [17.5: Accessing Digitalcoin with Rust](17_5_Accessing_Digitalcoind_with_Rust.md).
 
 ## Variant: Build Python from Source
 
-If you need to install Python 3 from source, follow these instructions, then continue with ["Creating a BitcoinRPC Project"](17_4_Accessing_Bitcoind_with_Python.md#creating-a-bitcoinrpc-project).
+If you need to install Python 3 from source, follow these instructions, then continue with ["Creating a DigitalcoinRPC Project"](17_4_Accessing_Digitalcoind_with_Python.md#creating-a-bitcoinrpc-project).
 
 ### 1. Install Dependencies
 ```sh

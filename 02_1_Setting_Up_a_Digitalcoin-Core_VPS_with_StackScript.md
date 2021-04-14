@@ -4,9 +4,9 @@ This document explains how to set up a VPS (Virtual Private Sever) to run a Digi
 
 > :warning: **WARNING:** Don’t use a VPS for a digitalcoin wallet with significant real funds; see http://blog.thestateofme.com/2012/03/03/lessons-to-be-learned-from-the-linode-digitalcoin-incident/ . It is very nice to be able experiment with real digitalcoin transactions on a live node without tying up a self-hosted server on a local network. It's also useful to be able to use an iPhone or iPad to communicate via SSH to your VPS to do some simple digitalcoin tasks. But a higher level of safety is required for significant funds.
 
-* If you want to understand what this setup does, read [Appendix I: Understanding Digitalcoin Standup](A1_0_Understanding_Bitcoin_Standup.md) as you install.
-* If you want to instead setup on a machine other than a Linode VPS, such as an AWS machine or a Mac, goto [§2.2: Setting Up a Digitalcoin-Core via Other Means](02_2_Setting_Up_Bitcoin_Core_Other.md)
-* If you already have a Digitalcoin node running, goto [Chapter Three: Understanding Your Digitalcoin Setup](03_0_Understanding_Your_Bitcoin_Setup.md).
+* If you want to understand what this setup does, read [Appendix I: Understanding Digitalcoin Standup](A1_0_Understanding_Digitalcoin_Standup.md) as you install.
+* If you want to instead setup on a machine other than a Linode VPS, such as an AWS machine or a Mac, goto [§2.2: Setting Up a Digitalcoin-Core via Other Means](02_2_Setting_Up_Digitalcoin_Core_Other.md)
+* If you already have a Digitalcoin node running, goto [Chapter Three: Understanding Your Digitalcoin Setup](03_0_Understanding_Your_Digitalcoin_Setup.md).
 
 ## Getting Started with Linode
 
@@ -213,7 +213,7 @@ If for some reason you wanted to change this (_we don't suggest it_), you can do
 echo "unattended-upgrades unattended-upgrades/enable_auto_updates boolean false" | debconf-set-selections
 ```
 
-_If you'd like to know more about what the Digitalcoin Standup stackscript does, please see [Appendix I: Understanding Digitalcoin Standup](A1_0_Understanding_Bitcoin_Standup.md)._
+_If you'd like to know more about what the Digitalcoin Standup stackscript does, please see [Appendix I: Understanding Digitalcoin Standup](A1_0_Understanding_Digitalcoin_Standup.md)._
 
 ## Playing with Digitalcoin
 
@@ -239,9 +239,9 @@ Creating a Digitalcoin-Core VPS with the Standup scripts made the whole process 
 You have a few options for what's next:
 
    * Read the [StackScript](https://github.com/BlockchainCommons/Digitalcoin-Standup-Scripts/blob/master/Scripts/LinodeStandUp.sh) to understand your setup.
-   * Read what the StackScript does in [Appendix I](A1_0_Understanding_Bitcoin_Standup.md).
-   * Choose an entirely alternate methodology in [§2.2: Setting Up a Digitalcoin-Core Machine via Other Means](02_2_Setting_Up_Bitcoin_Core_Other.md).
-   * Move on to "digitalcoin-cli" with [Chapter Three: Understanding Your Digitalcoin Setup](03_0_Understanding_Your_Bitcoin_Setup.md).
+   * Read what the StackScript does in [Appendix I](A1_0_Understanding_Digitalcoin_Standup.md).
+   * Choose an entirely alternate methodology in [§2.2: Setting Up a Digitalcoin-Core Machine via Other Means](02_2_Setting_Up_Digitalcoin_Core_Other.md).
+   * Move on to "digitalcoin-cli" with [Chapter Three: Understanding Your Digitalcoin Setup](03_0_Understanding_Your_Digitalcoin_Setup.md).
 
 ## Synopsis: Digitalcoin Installation Types
 
@@ -249,8 +249,8 @@ You have a few options for what's next:
 
 **Pruned Mainnet.** This will cut the blockchain you're storing down to just the last 550 blocks. If you're not mining or running some other Digitalcoin service, this should be plenty for validation.
 
-**Testnet.** This gives you access to an alternative Digitalcoin blockchain where the Bitcoins don't actually have value. It's intended for experimentation and testing.
+**Testnet.** This gives you access to an alternative Digitalcoin blockchain where the Digitalcoins don't actually have value. It's intended for experimentation and testing.
 
 **Pruned Testnet.** This is just the last 550 blocks of Testnet ... because the Testnet blockchain is pretty big now too.
 
-**Private Regtest.** This is Regression Testing Mode, which lets you run a totally local Digitalcoin server. It allows for even more in-depth testing. There's no pruning needed here, because you'll be starting from scratch. This is a very different setup, and so is covered in [Appendix 3](A3_0_Using_Bitcoin_Regtest.md).
+**Private Regtest.** This is Regression Testing Mode, which lets you run a totally local Digitalcoin server. It allows for even more in-depth testing. There's no pruning needed here, because you'll be starting from scratch. This is a very different setup, and so is covered in [Appendix 3](A3_0_Using_Digitalcoin_Regtest.md).

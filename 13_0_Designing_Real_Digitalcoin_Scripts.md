@@ -18,4 +18,4 @@ Supporting objectives include the ability to:
 
   * [Section One: Writing Puzzles Scripts](13_1_Writing_Puzzle_Scripts.md)
   * [Section Two: Writing Complex Multisig Scripts](13_2_Writing_Complex_Multisig_Scripts.md) 
-  * [Section Three: Empowering Digitalcoin with Scripts](13_3_Empowering_Bitcoin_with_Scripts.md)
+  * [Section Three: Empowering Digitalcoin with Scripts](13_3_Empowering_Digitalcoin_with_Scripts.md)

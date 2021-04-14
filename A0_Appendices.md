@@ -17,6 +17,6 @@ Supporting objectives include the ability to:
    
 ## Table of Contents
 
-   * [Appendix One: Understanding Digitalcoin Standup](A1_0_Understanding_Bitcoin_Standup.md)
-   * [Appendix Two: Compiling Digitalcoin from Source](A2_0_Compiling_Bitcoin_from_Source.md)
-   * [Appendix Three: Using Digitalcoin Regtest](A3_0_Using_Bitcoin_Regtest.md)
+   * [Appendix One: Understanding Digitalcoin Standup](A1_0_Understanding_Digitalcoin_Standup.md)
+   * [Appendix Two: Compiling Digitalcoin from Source](A2_0_Compiling_Digitalcoin_from_Source.md)
+   * [Appendix Three: Using Digitalcoin Regtest](A3_0_Using_Digitalcoin_Regtest.md)

@@ -145,4 +145,4 @@ Digitalcoin is a peer-to-peer system that allows for the transfer of funds throu
 
 ## What's Next?
 
-Advance through "Preparing for Digitalcoin" with [Chapter Two: Setting Up a Digitalcoin-Core VPS](02_0_Setting_Up_a_Bitcoin-Core_VPS.md).
+Advance through "Preparing for Digitalcoin" with [Chapter Two: Setting Up a Digitalcoin-Core VPS](02_0_Setting_Up_a_Digitalcoin-Core_VPS.md).

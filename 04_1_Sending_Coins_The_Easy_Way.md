@@ -6,7 +6,7 @@ The `digitalcoin-cli` offers three major ways to send coins: as a simple command
 
 Before you send any money on the Digitalcoin network, you should think about what transaction fees you're going to pay.
 
-> :book: ***What is a transaction fee?*** There's no such thing as a free lunch. Miners incorporate transactions into blocks because they're paid to do so. Not only do they get paid by the network for making the block, but they also get paid by transactors for including their transactions. If you don't pay a fee, your transaction might get stuck ... forever (or, until saved by some of the tricks in [Chapter Five](05_0_Controlling_Bitcoin_Transactions.md)).
+> :book: ***What is a transaction fee?*** There's no such thing as a free lunch. Miners incorporate transactions into blocks because they're paid to do so. Not only do they get paid by the network for making the block, but they also get paid by transactors for including their transactions. If you don't pay a fee, your transaction might get stuck ... forever (or, until saved by some of the tricks in [Chapter Five](05_0_Controlling_Digitalcoin_Transactions.md)).
 
 When you're using the simple and automated methods for creating transactions, as outlined here and in [§4.5: Sending Coins with Automated Raw Transactions](04_5_Sending_Coins_with_Automated_Raw_Transactions.md), Digitalcoin will calculate transaction fees for you. This is done using Floating Fees, where the `digitalcoind` watches how long transactions are taking to confirm and automatically calculates for you what to spend.
 

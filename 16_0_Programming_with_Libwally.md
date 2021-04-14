@@ -26,4 +26,4 @@ Supporting objectives include the ability to:
   * [Section Four: Using PSBTs in Libwally](16_4_Using_PSBTs_in_Libwally.md) 
   * [Section Five: Using Scripts in Libwally](16_5_Using_Scripts_in_Libwally.md)
   * [Section Six: Using Other Functions in Libwally](16_6_Using_Other_Functions_in_Libwally.md)
-  * [Section Seven: Integrating Libwally and Digitalcoin-CLI](16_7_Integrating_Libwally_and_Bitcoin-CLI.md)
+  * [Section Seven: Integrating Libwally and Digitalcoin-CLI](16_7_Integrating_Libwally_and_Digitalcoin-CLI.md)

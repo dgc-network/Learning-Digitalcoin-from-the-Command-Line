@@ -33,7 +33,7 @@ SparkWallet is a minimalistic wallet GUI for c-lightning, accessible over the we
 
 c-lightning isn't your only option. Today there are three widely used implementations of the Lightning Network. All of them follow the [Basis of Lightning Technology (BOLT) documents](https://github.com/lightningnetwork/lightning-rfc), which describe a layer-2 protocol for off-chain digitalcoin transfers. The specifications are currently a work-in-progress that is still being drafted.
 
-| Name  | Description | BitcoinStandup | Language | Repository |
+| Name  | Description | DigitalcoinStandup | Language | Repository |
 | ------------- | ------------- | :---: | ------------- | ------------- |
 | C-lighting  | Blockstream  | X | C | [Download](https://github.com/ElementsProject/lightning) |
 | LND  | Lightning Labs  | X | Go | [Download](https://github.com/lightningnetwork/lnd) |

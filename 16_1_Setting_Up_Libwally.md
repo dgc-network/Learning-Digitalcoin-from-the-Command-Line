@@ -149,7 +149,7 @@ include/wally_core.h:#define WALLY_OK      0 /** Success */
 
 You should also install Libsodium to get access to a high quality random number generator for testing purposes.
 
-> :warning: **WARNING:** The generation of random numbers can be one of the greatest points of vulnerability in any Digitalcoin software. If you do it wrong, you expose your users to attacks because they end up with insecure Digitalcoin keys, and this isn't a [theoretical problem](https://github.com/BlockchainCommons/SmartCustodyBook/blob/master/manuscript/03-adversaries.md#adversary-systemic-key-compromise). BlockchainInfo once incorrectly generated 0.0002% of their keys, which resulted in the temporary loss of 250 Bitcoins. Bottom line: make sure you're totally comfortable with your random number generation. It might be Libsodium, or it might be an even more robust TRNG method.
+> :warning: **WARNING:** The generation of random numbers can be one of the greatest points of vulnerability in any Digitalcoin software. If you do it wrong, you expose your users to attacks because they end up with insecure Digitalcoin keys, and this isn't a [theoretical problem](https://github.com/BlockchainCommons/SmartCustodyBook/blob/master/manuscript/03-adversaries.md#adversary-systemic-key-compromise). BlockchainInfo once incorrectly generated 0.0002% of their keys, which resulted in the temporary loss of 250 Digitalcoins. Bottom line: make sure you're totally comfortable with your random number generation. It might be Libsodium, or it might be an even more robust TRNG method.
 
 You can download a [Libsodium tarball](https://download.libsodium.org/libsodium/releases/) and then follow the instructions at [Libsodium installation](https://doc.libsodium.org/installation) to install.
 

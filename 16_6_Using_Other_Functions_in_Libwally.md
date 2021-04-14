@@ -122,6 +122,6 @@ There is much more that you can do with Libwally, more than can be covered in th
 
 ## What's Next?
 
-Finish learning about "Programming Digitalcoin with Libwally" in [§16.7: Integrating Libwally and Digitalcoin-CLI](16_7_Integrating_Libwally_and_Bitcoin-CLI.md).  
+Finish learning about "Programming Digitalcoin with Libwally" in [§16.7: Integrating Libwally and Digitalcoin-CLI](16_7_Integrating_Libwally_and_Digitalcoin-CLI.md).  
 
 

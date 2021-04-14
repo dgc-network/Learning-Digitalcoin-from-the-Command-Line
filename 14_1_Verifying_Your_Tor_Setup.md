@@ -97,7 +97,7 @@ When you have all of that information you can issue a `digitalcoin-cli` command 
 $ torify digitalcoin-cli -rpcconnect=mgcym6je63k44b3i5uachhsndayzx7xi4ldmwrm7in7yvc766rykz6yd.onion -rpcport=1309 -rpcpassword=685316cc239c24ba71fd0969fa55634f getblockcount
 ```
 
-### Verify Your Tor Setup for Bitcoind
+### Verify Your Tor Setup for Digitalcoind
 
 Digitalcoin Standup also ensures that your `digitalcoind` is set up to optionally communicate on an onion address.
 
@@ -356,8 +356,8 @@ Nonetheless, there are ways to make `digitalcoind` use Tor more, as discussed in
 
 Tor is a software package installed at part of Digitalcoin Standup that allows you to exchange communications anonymously. It will protect both your RPC ports (8332 or 18332) and your `digitalcoind` ports (8333 or 18333) — but you have to actively connect to the onion address to use them! Tor is a building stone of privacy and security for your Digitalcoin setup, and you can verify it's available and linked to Digitalcoin with a few simple commands.
 
-> :fire: ***What is the power of Tor?*** Many attacks on Digitalcoin users depend on knowing who the victim is and that they're transacting Bitcoins. Tor can protect you from that by hiding both where you are and what you're doing. It's particularly important if you want to connect to your own node remotely via a software wallet, and can be crucial if you do so in some country where you might not feel that your Digitalcoin usage is appreciated or protected. If you must take your Digitalcoin services on the road, make sure that your wallet fully supports Tor and exchanges all RPC commands with your server using that protocol.
+> :fire: ***What is the power of Tor?*** Many attacks on Digitalcoin users depend on knowing who the victim is and that they're transacting Digitalcoins. Tor can protect you from that by hiding both where you are and what you're doing. It's particularly important if you want to connect to your own node remotely via a software wallet, and can be crucial if you do so in some country where you might not feel that your Digitalcoin usage is appreciated or protected. If you must take your Digitalcoin services on the road, make sure that your wallet fully supports Tor and exchanges all RPC commands with your server using that protocol.
 
 ## What's Next?
 
-Continue "Understanding Tor" with [§14.2: Changing Your Digitalcoin Hidden Services](14_2_Changing_Your_Bitcoin_Hidden_Services.md).
+Continue "Understanding Tor" with [§14.2: Changing Your Digitalcoin Hidden Services](14_2_Changing_Your_Digitalcoin_Hidden_Services.md).

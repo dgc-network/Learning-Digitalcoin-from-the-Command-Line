@@ -1,6 +1,6 @@
 # Appendix I: Understanding Digitalcoin Standup
 
-[§2.1: Setting Up a Digitalcoin Core VPS with StackScript](02_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md) explains the process of creating a Digitalcoin node using [Digitalcoin-Standup-Scripts](https://github.com/BlockchainCommons/Digitalcoin-Standup-Scripts). The following appendix explains what the major sections of the script do. You may wish to follow along in [Linode Standup](https://github.com/BlockchainCommons/Digitalcoin-Standup-Scripts/blob/master/Scripts/LinodeStandUp.sh) in another window.
+[§2.1: Setting Up a Digitalcoin Core VPS with StackScript](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md) explains the process of creating a Digitalcoin node using [Digitalcoin-Standup-Scripts](https://github.com/BlockchainCommons/Digitalcoin-Standup-Scripts). The following appendix explains what the major sections of the script do. You may wish to follow along in [Linode Standup](https://github.com/BlockchainCommons/Digitalcoin-Standup-Scripts/blob/master/Scripts/LinodeStandUp.sh) in another window.
 
 ## Step 1: Hostname
 
@@ -28,13 +28,13 @@ If you supplied an IP address, `ssh` access will be limited to that address, per
 
 Tor is installed to provide protected (hidden) services to access Digitalcoin's RPC commands through your server. See [§14.1: Verifying Your Tor Setup](14_1_Verifying_Your_Tor_Setup.md) for more information on your Tor Setup.
 
-If you supplied an authorized client for the hidden services, access will be limited to that key, per `/var/lib/tor/standup/authorized_clients`. If you did not, [§14.2](14_2_Changing_Your_Bitcoin_Hidden_Services.md) explains how to do so at a later date.
+If you supplied an authorized client for the hidden services, access will be limited to that key, per `/var/lib/tor/standup/authorized_clients`. If you did not, [§14.2](14_2_Changing_Your_Digitalcoin_Hidden_Services.md) explains how to do so at a later date.
 
 ## Step 6: Installing Digitalcoin
 
 Digitalcoin is installed in `~standup/.digitalcoin`. Your configuration is stored in `~standup/.digitalcoin/digitalcoin.conf`.
 
-Be sure that the checksums verified per [§2.1](02_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md), otherwise you could be exposed to a supply-chain attack.
+Be sure that the checksums verified per [§2.1](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md), otherwise you could be exposed to a supply-chain attack.
 
 ## Step 7: Installing QR Encoder
 
@@ -46,6 +46,6 @@ Digitalcoin Standup uses scripts to try and match much of the functionality of a
 
 ## What's Next?
 
-If you were in the process of creating a Digitalcoin node for use in this course, you should return to [§2.1](02_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md).
+If you were in the process of creating a Digitalcoin node for use in this course, you should return to [§2.1](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md).
 
-If you are reading through the appendices, continue with [Appendix II: Compiling Digitalcoin from Source](A2_0_Compiling_Bitcoin_from_Source.md).
+If you are reading through the appendices, continue with [Appendix II: Compiling Digitalcoin from Source](A2_0_Compiling_Digitalcoin_from_Source.md).

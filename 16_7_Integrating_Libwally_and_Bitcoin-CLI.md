@@ -182,7 +182,7 @@ Unfortunately, not all interactions between Libwally and `digitalcoin-cli` go as
 
 ## Import Private Keys
 
-Fortunately, you can do much the same thing by importing a private key generated in Libwally. Take a look at [genhd-for-import.c](src/16_7_genhd_for_import.c), a simplified version of the `genhd` program from [§16.3](16_3_Using_BIP32_in_Libwally.md) that also uses the `jansson` library from [§15.1](15_1_Accessing_Bitcoind_with_C.md) for regularized output.
+Fortunately, you can do much the same thing by importing a private key generated in Libwally. Take a look at [genhd-for-import.c](src/16_7_genhd_for_import.c), a simplified version of the `genhd` program from [§16.3](16_3_Using_BIP32_in_Libwally.md) that also uses the `jansson` library from [§15.1](15_1_Accessing_Digitalcoind_with_C.md) for regularized output.
 
 The updated code also contains one change of note: it requests a fingerprint from Libwally so that it can properly create a derivation path:
 ```
@@ -195,7 +195,7 @@ The updated code also contains one change of note: it requests a fingerprint fro
 
 > :warning: **WARNING:** Remember that the fingerprint in derivation paths is arbitrary. Because Libwally provides one, we're using it, but if you didn't have one, you could add an arbitrary 4-byte hexcode as a fingerprint to your derivation path.
 
-Be sure to compile the new code with the `jansson` library, after installing it (if necessary) per [§15.1](15_1_Accessing_Bitcoind_with_C.md).
+Be sure to compile the new code with the `jansson` library, after installing it (if necessary) per [§15.1](15_1_Accessing_Digitalcoind_with_C.md).
 ```
 $ cc genhd-for-import.c -lwallycore -lsodium -ljansson -o genhd-for-import
 ```
@@ -327,4 +327,4 @@ With a foundational knowledge of Libwally, you can now complement all of the wor
 
 ## What's Next?
 
-Learn about other sorts of programming in [Chapter 17: Talking to Bitcoind with Other Languages](17_0_Talking_to_Bitcoind_Other.md).
+Learn about other sorts of programming in [Chapter 17: Talking to Digitalcoind with Other Languages](17_0_Talking_to_Digitalcoind_Other.md).

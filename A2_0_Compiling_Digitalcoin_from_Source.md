@@ -1,6 +1,6 @@
 # Appendix II: Compiling Digitalcoin from Source
 
-This course presumes that you will use a script to create a Digitalcoin environment, either using Digitalcoin Standup for Linode per [§2.1](02_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md), or via some other means per [§2.2](02_2_Setting_Up_Bitcoin_Core_Other.md). However, you may prefer to compile Digitalcoin by hand.
+This course presumes that you will use a script to create a Digitalcoin environment, either using Digitalcoin Standup for Linode per [§2.1](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md), or via some other means per [§2.2](02_2_Setting_Up_Digitalcoin_Core_Other.md). However, you may prefer to compile Digitalcoin by hand.
 
 This has the following benefits:
 
@@ -122,7 +122,7 @@ If you wanted the increased security of installing Digitalcoin from source, you 
 
 ## What's Next?
 
-If you were in the process of creating a Digitalcoin node for use in this course, you should continue on with [Chapter 3: Understanding Your Digitalcoin Setup](03_0_Understanding_Your_Bitcoin_Setup.md).
+If you were in the process of creating a Digitalcoin node for use in this course, you should continue on with [Chapter 3: Understanding Your Digitalcoin Setup](03_0_Understanding_Your_Digitalcoin_Setup.md).
 
-If you are reading through the appendices, continue with [Appendix III: Using Digitalcoin Regtest](A3_0_Using_Bitcoin_Regtest.md).
+If you are reading through the appendices, continue with [Appendix III: Using Digitalcoin Regtest](A3_0_Using_Digitalcoin_Regtest.md).
 

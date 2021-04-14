@@ -1,4 +1,4 @@
-# 17.5: Accessing Bitcoind with Rust
+# 17.5: Accessing Digitalcoind with Rust
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
@@ -352,11 +352,11 @@ signed tx Transaction { version: 2, lock_time: 0, input: [TxIn { previous_output
 b0eda3517e6fac69e58ae315d7fe7a1981e3a858996cc1e3135618cac9b79d1a
 ```
 
-## Summary: Accessing Bitcoind with Rust
+## Summary: Accessing Digitalcoind with Rust
 
 `bitcoincore-rpc` is a simple and robust crate that will allow you to interact with Digitalcoin RPC using Rust. However, as of this writing it has fallen behind Digitalcoin Core, which might cause some issues with usage.
 
 ## What's Next?
 
-Learn more about "Talking to Digitalcoin in Other Languages" in [17.6: Accessing Digitalcoin with Swift](17_6_Accessing_Bitcoind_with_Swift.md).
+Learn more about "Talking to Digitalcoin in Other Languages" in [17.6: Accessing Digitalcoin with Swift](17_6_Accessing_Digitalcoind_with_Swift.md).
 

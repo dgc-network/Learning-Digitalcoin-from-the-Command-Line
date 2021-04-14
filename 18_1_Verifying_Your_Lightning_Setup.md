@@ -216,7 +216,7 @@ You may instead get an error, depending on the precise situation.
 
 If the Digitalcoin node is still sycing with digitalcoin network you should see a message like this:
 ```
-"warning_bitcoind_sync": "Bitcoind is not up-to-date with network."
+"warning_bitcoind_sync": "Digitalcoind is not up-to-date with network."
 ```
 If your lightning daemon is not up-to-date, you'll get a message like this:
 ```

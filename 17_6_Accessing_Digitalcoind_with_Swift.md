@@ -1,4 +1,4 @@
-# 17.6: Accessing Bitcoind with Swift
+# 17.6: Accessing Digitalcoind with Swift
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
@@ -36,11 +36,11 @@ Afterward, run the GordianServer App, and tell it to `Start` Testnet.
 
 #### 3. Make Your Gordian digitalcoin-cli Accessible
 
-When you want to access the `digitalcoin-cli` created by GordianServer on your local Mac, you can find it at  `~/.standup/BitcoinCore/digitalcoin-VERSION/bin/digitalcoin-cli`, for example  `~/.standup/BitcoinCore/digitalcoin-0.20.1/bin/digitalcoin-cli`. 
+When you want to access the `digitalcoin-cli` created by GordianServer on your local Mac, you can find it at  `~/.standup/DigitalcoinCore/digitalcoin-VERSION/bin/digitalcoin-cli`, for example  `~/.standup/DigitalcoinCore/digitalcoin-0.20.1/bin/digitalcoin-cli`. 
 
 You may wish to create an alias for that:
 ```
-alias digitalcoin-cli="~/.standup/BitcoinCore/digitalcoin-0.20.1/bin/digitalcoin-cli -testnet"
+alias digitalcoin-cli="~/.standup/DigitalcoinCore/digitalcoin-0.20.1/bin/digitalcoin-cli -testnet"
 ```
 
 > :link: **TESTNET vs. MAINNET:** Obviously, the `-testnet` parameter is only required if you're running on testnet.
@@ -394,7 +394,7 @@ That covers our usual discussions of programming Digitalcoin RPC in a language, 
 * The Blockchain Commons [ios-Digitalcoin framework](https://github.com/BlockchainCommons/iOS-Digitalcoin) converts the Libbitcoin library from C++ to Swift
 * [Libwally Swift](https://github.com/blockchain/libwally-swift) is a Swift wrapper for Libwally
 
-## Summary: Accessing Bitcoind with Swift
+## Summary: Accessing Digitalcoind with Swift
 
 Swift is a robust modern programming language that unfortunately doesn't yet have any easy-to-use RPC libraries ... which just gave us the opportunity to write an RPC-access function of our own. With that in hand, you can interact with `digitalcoind` on a Mac or build companion applications over on an iPhone, which is a perfect combination for airgapped Digitalcoin work.
 

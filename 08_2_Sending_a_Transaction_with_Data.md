@@ -120,4 +120,4 @@ Note that there is some controversy over using the Digitalcoin blockchain in thi
 
 ## What's Next?
 
-Move on to "Digitalcoin Scripting" with [Chapter Nine: Introducing Digitalcoin Scripts](09_0_Introducing_Bitcoin_Scripts.md).
+Move on to "Digitalcoin Scripting" with [Chapter Nine: Introducing Digitalcoin Scripts](09_0_Introducing_Digitalcoin_Scripts.md).

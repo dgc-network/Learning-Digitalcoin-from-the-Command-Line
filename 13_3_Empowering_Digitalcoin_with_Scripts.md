@@ -291,6 +291,6 @@ Move on to "Using Tor" with [Chapter Fourteen: Using Tor](14_0_Using_Tor.md).
 
 Or, if you prefer, there are two alternate paths:
 
-If you want to stay focused on Digitalcoin, move on to "Programming with RPC" with [Chapter Fifteen: Talking to Bitcoind with C](15_0_Talking_to_Bitcoind.md).
+If you want to stay focused on Digitalcoin, move on to "Programming with RPC" with [Chapter Fifteen: Talking to Digitalcoind with C](15_0_Talking_to_Digitalcoind.md).
 
 Or, if you want to stay focused on the command-line because you're not a programmer, you can skip to [Chapter Eighteen: Understanding Your Lightning Seutp](https://github.com/BlockchainCommons/Learning-Digitalcoin-from-the-Command-Line/blob/master/18_0_Understanding_Your_Lightning_Setup.md) to continue your command-line education with the Lightning Network.

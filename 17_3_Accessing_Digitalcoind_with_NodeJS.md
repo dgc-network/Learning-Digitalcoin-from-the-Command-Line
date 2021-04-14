@@ -1,4 +1,4 @@
-# 17.3: Accessing Bitcoind with NodeJS
+# 17.3: Accessing Digitalcoind with NodeJS
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
@@ -46,7 +46,7 @@ $ npm test
 > bcrpc@0.2.2 test /home/user1/bcrpc
 > mocha tests.js
 
-  BitcoinD
+  DigitalcoinD
     ✓ is running
 
   bcrpc
@@ -263,7 +263,7 @@ You should get an output similar to this:
 
 The full code is available as [sendtx.js](src/17_3_sendtx.js).
 
-## Summary: Accessing Bitcoind with Node
+## Summary: Accessing Digitalcoind with Node
 
 With BCRPC you can access all the RPC commands available through ```digitalcoin-cli```, in JavaScript. The [BCRPC README](https://github.com/dgarage/bcrpc) has some examples which use promises (the examples in this document use callbacks). The [JavaScript behind it](https://github.com/dgarage/bcrpc/blob/master/index.js) is short and readable. 
 
@@ -271,4 +271,4 @@ Based on these examples you should be able to incorporate Digitalcoin in a Node.
 
 ## What's Next?
 
-Learn more about "Talking to Digitalcoin in Other Languages" in [17.4: Accessing Digitalcoin with Python](17_4_Accessing_Bitcoind_with_Python.md).
+Learn more about "Talking to Digitalcoin in Other Languages" in [17.4: Accessing Digitalcoin with Python](17_4_Accessing_Digitalcoind_with_Python.md).

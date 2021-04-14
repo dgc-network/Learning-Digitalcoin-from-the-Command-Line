@@ -1,8 +1,8 @@
-# 15.1: Accessing Bitcoind in C with RPC Libraries
+# 15.1: Accessing Digitalcoind in C with RPC Libraries
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-You've already seen one alternative way to access the Bitcoind's RPC ports: `curl`, which was covered in a [Chapter 4 Interlude](04_4__Interlude_Using_Curl.md). Interacting with `digitalcoind` through a RPC library in C is no different than that, you just need some good libraries to help you out. This section introduces a package called `libbitcoinrpc`, which allows you to access JSON-RPC `digitalcoind` port.  It uses a `curl` library for accessing the data and it uses the `jansson` library for encoding and decoding the JSON.
+You've already seen one alternative way to access the Digitalcoind's RPC ports: `curl`, which was covered in a [Chapter 4 Interlude](04_4__Interlude_Using_Curl.md). Interacting with `digitalcoind` through a RPC library in C is no different than that, you just need some good libraries to help you out. This section introduces a package called `libbitcoinrpc`, which allows you to access JSON-RPC `digitalcoind` port.  It uses a `curl` library for accessing the data and it uses the `jansson` library for encoding and decoding the JSON.
 
 ## Set Up libbitcoinrpc
 
@@ -270,7 +270,7 @@ bitcoinrpc_method_set_params(rpc_method, params)
 ```
 This section doesn't include a full example of this more complex methodology, but we'll see it in action multiple times in our first comprehensive RPC-based C program, in the next section.
 
-## Summary: Accessing Bitcoind with C
+## Summary: Accessing Digitalcoind with C
 
 By linking to the `bitcoinrpc` RPC and `jansson` JSON libraries, you can easily access `digitalcoind` via RPC calls from a C library. To do so, you create an RPC connection, then make individual RPC calls, some of them with parameters. `jansson` then allows you to decode the JSON responses. The next section will demonstrate how this can be used for a pragmatic, real-world program.
 
@@ -278,4 +278,4 @@ By linking to the `bitcoinrpc` RPC and `jansson` JSON libraries, you can easily 
 
 ## What's Next?
 
-Learn more about "Talking to Bitcoind with C" in [15.2: Programming Bitcoind in C with RPC Libraries](15_2_Programming_Bitcoind_with_C.md).
+Learn more about "Talking to Digitalcoind with C" in [15.2: Programming Digitalcoind in C with RPC Libraries](15_2_Programming_Digitalcoind_with_C.md).

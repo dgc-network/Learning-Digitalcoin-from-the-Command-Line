@@ -20,7 +20,7 @@ Supporting objectives include the ability to:
    
 ## Table of Contents
 
-You don't actually need to read this entire chapter. Decide if you want to run a StackScript to set a node up on a Linode VPS (§2.2); or you want to set up on a different environment, such as on an AWS machine or a Mac (§2.3). Then, jump to the appropriate section. Additional information on our suggested setups may also be found in [Appendix I](A1_0_Understanding_Bitcoin_Standup.md).
+You don't actually need to read this entire chapter. Decide if you want to run a StackScript to set a node up on a Linode VPS (§2.2); or you want to set up on a different environment, such as on an AWS machine or a Mac (§2.3). Then, jump to the appropriate section. Additional information on our suggested setups may also be found in [Appendix I](A1_0_Understanding_Digitalcoin_Standup.md).
 
-   * [Section One: Setting Up a Digitalcoin Core VPS with Digitalcoin Standup](02_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md)
-   * [Section Two: Setting Up a Digitalcoin Core Machine via Other Means](02_2_Setting_Up_Bitcoin_Core_Other.md)
+   * [Section One: Setting Up a Digitalcoin Core VPS with Digitalcoin Standup](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md)
+   * [Section Two: Setting Up a Digitalcoin Core Machine via Other Means](02_2_Setting_Up_Digitalcoin_Core_Other.md)

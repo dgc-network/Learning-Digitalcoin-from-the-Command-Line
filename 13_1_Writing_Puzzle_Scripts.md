@@ -4,7 +4,7 @@ Digitalcoin Scripts _don't_ actually have to depend on the knowledge of a secret
 
 ## Write Simple Algebra Scripts
 
-Our first real Script, from [§9.2: Running a Digitalcoin Script](09_2_Running_a_Bitcoin_Script.md) was an alegbraic puzzle. That Digitalcoin Script, `OP_ADD 99 OP_EQUAL`, could have been alternatively described as `x + y = 99`.
+Our first real Script, from [§9.2: Running a Digitalcoin Script](09_2_Running_a_Digitalcoin_Script.md) was an alegbraic puzzle. That Digitalcoin Script, `OP_ADD 99 OP_EQUAL`, could have been alternatively described as `x + y = 99`.
 
 This sort of Script doesn't have a lot of applicability in the real world, as it's too easy to claim the funds. But, a puzzle-solving contest giving out Digitalcoin dust might offer it as a fun entertainment.
 

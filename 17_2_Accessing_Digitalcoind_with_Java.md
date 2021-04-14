@@ -1,8 +1,8 @@
-# 17.2: Accessing Bitcoind with Java
+# 17.2: Accessing Digitalcoind with Java
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-This section explains how to interact with `digitalcoind` using the Java programming language and the [JavaBitcoindRpcClient](https://github.com/Polve/JavaBitcoindRpcClient). 
+This section explains how to interact with `digitalcoind` using the Java programming language and the [JavaDigitalcoindRpcClient](https://github.com/Polve/JavaDigitalcoindRpcClient). 
 
 ## Set Up Java
 
@@ -48,7 +48,7 @@ drwxr-xr-x 15 sudo 4.0K Sep  1 13:58 ..
 drwxr-xr-x  4 sudo 4.0K Sep  1 13:58 src
 ```
 
-In order to include `JavaBitcoindRpcClient`, you must add its dependency to `<dependendencies>` in the `pom.xml` file
+In order to include `JavaDigitalcoindRpcClient`, you must add its dependency to `<dependendencies>` in the `pom.xml` file
 
 ```xml
       <dependency>
@@ -81,22 +81,22 @@ $ mvn exec:java -Dexec.mainClass=com.blockchaincommons.lbtc.App
 
 If you use [Gradle]((https://gradle.org/releases/), you can instead run:
 ```groovy
-compile 'wf.digitalcoin:JavaBitcoindRpcClient:1.2.1'
+compile 'wf.digitalcoin:JavaDigitalcoindRpcClient:1.2.1'
 ```
 
-If you want a sample project and some instructions on how to run it on the server that you just created, you can refer to the [Bitcoind Java Sample Project](https://github.com/brunocvcunha/digitalcoind-java-client-sample/). You can also browse all souce code for digitalcoin-rpc-client (https://github.com/Polve/digitalcoin-rpc-client).
+If you want a sample project and some instructions on how to run it on the server that you just created, you can refer to the [Digitalcoind Java Sample Project](https://github.com/brunocvcunha/digitalcoind-java-client-sample/). You can also browse all souce code for digitalcoin-rpc-client (https://github.com/Polve/digitalcoin-rpc-client).
 
 ## Build Your Connection
 
-To use `JavaBitcoindRpcClient`, you need to create a `BitcoindRpcClient` instance. You do this by creating a URL with arguments of username, password, IP address and port. As you'll recall, the IP address `127.0.0.1` and port `18332` should be correct for the standard testnet setup described in this course, while you can extract the user and password from `~/.digitalcoin/digitalcoin.conf`.
+To use `JavaDigitalcoindRpcClient`, you need to create a `DigitalcoindRpcClient` instance. You do this by creating a URL with arguments of username, password, IP address and port. As you'll recall, the IP address `127.0.0.1` and port `18332` should be correct for the standard testnet setup described in this course, while you can extract the user and password from `~/.digitalcoin/digitalcoin.conf`.
 
 ```java
-       BitcoindRpcClient rpcClient = new BitcoinJSONRPCClient("http://StandUp:6305f1b2dbb3bc5a16cd0f4aac7e1eba@localhost:18332");
+       DigitalcoindRpcClient rpcClient = new DigitalcoinJSONRPCClient("http://StandUp:6305f1b2dbb3bc5a16cd0f4aac7e1eba@localhost:18332");
 ```
 Note that you'll also need to import the appropriate information:
 ```
-import wf.digitalcoin.javabitcoindrpcclient.BitcoinJSONRPCClient;
-import wf.digitalcoin.javabitcoindrpcclient.BitcoindRpcClient;
+import wf.digitalcoin.javabitcoindrpcclient.DigitalcoinJSONRPCClient;
+import wf.digitalcoin.javabitcoindrpcclient.DigitalcoindRpcClient;
 ```
 
 > **MAINNET VS TESTNET:** The port would be 8332 for a mainnet setup.
@@ -110,7 +110,7 @@ rpcClient.stop();
 
 ### Make an RPC Call
 
-You'll find that the `BitcoindRpcClient` provides most of the functionality that can be accessed through `digitalcoin-cli` or other RPC methods, using the same method names, but in camelCase. 
+You'll find that the `DigitalcoindRpcClient` provides most of the functionality that can be accessed through `digitalcoin-cli` or other RPC methods, using the same method names, but in camelCase. 
 
 For example, to execute the `getmininginfo` command to get the block information and the difficulty on the network, you should use the `getMiningInfo()` method:
 ```java
@@ -196,7 +196,7 @@ Priv Key: cTy2AnmAALsHokYzJzTdsUBSqBtypmWfmSNYgG6qQH43euUZgqic
 
 ## Send a Transaction
 
-The JavaBitcoindRpcClient library has some good tools that make it easy to create a transaction from scratch.
+The JavaDigitalcoindRpcClient library has some good tools that make it easy to create a transaction from scratch.
 
 ### Create a Transaction
 
@@ -226,9 +226,9 @@ List<Unspent> utxos = rpcClient.listUnspent(0, Integer.MAX_VALUE, addr1);
 System.out.println("Found " + utxos.size() + " UTXOs (unspent transaction outputs) belonging to addr1");
 ```
 
-Transactions are built with `BitcoinRawTxBuilder`:
+Transactions are built with `DigitalcoinRawTxBuilder`:
 ```
-        BitcoinRawTxBuilder txb = new BitcoinRawTxBuilder(rpcClient);
+        DigitalcoinRawTxBuilder txb = new DigitalcoinRawTxBuilder(rpcClient);
 ```
 First you fill the inputs with the UTXOs you're spending:
 ```
@@ -296,13 +296,13 @@ Sent signedRawTx (txID): 82032c07e0ed91780c3369a1943ea8abf49c9e11855ffedd935374e
 
 ## Listen to Transactions or Blocks
 
-As with [C and its ZMQ libraries](15_3_Receiving_Bitcoind_Notifications_with_C.md), there are easy ways to use Java to listen to the blockchain — and to execute specific code when something happens, such as a transaction that involves an address in your wallet, or even the generation of a new block in the network.
+As with [C and its ZMQ libraries](15_3_Receiving_Digitalcoind_Notifications_with_C.md), there are easy ways to use Java to listen to the blockchain — and to execute specific code when something happens, such as a transaction that involves an address in your wallet, or even the generation of a new block in the network.
 
-To do this, use `JavaBitcoindRpcClient`'s `BitcoinAcceptor` class, which allows you to attach listeners in the network.
+To do this, use `JavaDigitalcoindRpcClient`'s `DigitalcoinAcceptor` class, which allows you to attach listeners in the network.
 
 ```java
         String blockHash = rpcClient.getBestBlockHash();
-	BitcoinAcceptor acceptor = new BitcoinAcceptor(rpcClient, blockHash, 6, new BitcoinPaymentListener() {
+	DigitalcoinAcceptor acceptor = new DigitalcoinAcceptor(rpcClient, blockHash, 6, new DigitalcoinPaymentListener() {
 
 	      @Override
 	      public void transaction(Transaction tx) {
@@ -324,11 +324,11 @@ Transaction: {account=Tests, address=mhopuJzgmTwhGfpNLCJ9CRknugY691oXp1, categor
 Block: 000000004564adfee3738314549f7ca35d96c4da0afc6b232183917086b6d971
 ```
 
-### Summary Accessing Bitcoind with Java
+### Summary Accessing Digitalcoind with Java
 
 By using the javabitcoinrpc library, you can easily access digitalcoind via RPC calls from Java. You'll also have access to nice additional features, like the `bitcoinAcceptor` listening service.
 
 ## What's Next?
 
-Learn more about "Talking to Digitalcoin in Other Languages" in [17.3: Accessing Digitalcoin with NodeJS](17_3_Accessing_Bitcoind_with_NodeJS.md).
+Learn more about "Talking to Digitalcoin in Other Languages" in [17.3: Accessing Digitalcoin with NodeJS](17_3_Accessing_Digitalcoind_with_NodeJS.md).
 

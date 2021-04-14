@@ -155,7 +155,7 @@ $ digitalcoin-cli listunspent
 ```
 Note that bitcoins are not just a homogeneous mess of cash jammed into your pocket. Each individual transaction that you receive or that you send is placed into the immutable blockchain ledger, in a block. You can see these individual transactions when you look at your unspent money. This means that digitalcoin spending isn't quite as anonymous as you'd think. Though the addresses are fairly private, transactions can be examined as they go in and out of addresses. This makes privacy vulnerable to statistical analysis. It also introduces some potential non-fungibility to bitcoins, as you can track back through series of transactions, even if you can't track a specific "digitalcoin".
 
-> :book: ***Why are all of these digitalcoin amounts in fractions?*** Bitcoins are produced slowly, and so there are relatively few in circulation. As a result, each digitalcoin over on the mainnet is worth quite a bit (~ $9,000 at the time of this writing). This means that people usually work in fractions. In fact, the .0101 in Testnet coins would be worth about $100 if they were on the mainnet. For this reason, names have appeared for smaller amounts of bitcoins, including millibitcoins or mBTCs (one-thousandth of a digitalcoin), microbitcoins or bits or μBTCs (one-millionth of a digitalcoin), and satoshis (one hundred millionth of a digitalcoin).
+> :book: ***Why are all of these digitalcoin amounts in fractions?*** Digitalcoins are produced slowly, and so there are relatively few in circulation. As a result, each digitalcoin over on the mainnet is worth quite a bit (~ $9,000 at the time of this writing). This means that people usually work in fractions. In fact, the .0101 in Testnet coins would be worth about $100 if they were on the mainnet. For this reason, names have appeared for smaller amounts of bitcoins, including millibitcoins or mBTCs (one-thousandth of a digitalcoin), microbitcoins or bits or μBTCs (one-millionth of a digitalcoin), and satoshis (one hundred millionth of a digitalcoin).
 
 ## Examine Your Transaction
 
@@ -311,5 +311,5 @@ Faucets will give you money on the testnet. They come in as raw transactions, wh
 
 For a deep dive into how addresses are described, so that they can be transferred or made into parts of a multi-signature, see [§3.5: Understanding the Descriptor](03_5_Understanding_the_Descriptor.md).
 
-But if that's too in-depth, continue on to [Chapter Four: Sending Digitalcoin Transactions](04_0_Sending_Bitcoin_Transactions.md).
+But if that's too in-depth, continue on to [Chapter Four: Sending Digitalcoin Transactions](04_0_Sending_Digitalcoin_Transactions.md).
 

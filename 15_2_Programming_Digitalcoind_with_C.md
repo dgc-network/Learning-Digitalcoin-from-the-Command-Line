@@ -1,8 +1,8 @@
-# 15.2: Programming Bitcoind in C with RPC Libraries
+# 15.2: Programming Digitalcoind in C with RPC Libraries
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-[§15.1](15_1_Accessing_Bitcoind_with_C.md) laid out the methodology for creating C programs using RPC and JSON libraries. We're now going to show the potential of those C libraries by laying out a simplistic, first cut of an actual Digitalcoin program.
+[§15.1](15_1_Accessing_Digitalcoind_with_C.md) laid out the methodology for creating C programs using RPC and JSON libraries. We're now going to show the potential of those C libraries by laying out a simplistic, first cut of an actual Digitalcoin program.
 
 ## Plan for Your Code
 
@@ -65,7 +65,7 @@ float tx_total = tx_amount + tx_fee;
 
 ### Step 3: Prepare Your RPC 
 
-Obviously, you're going to need to get all of your variables ready again, as discussed in [§15.1: Accessing Bitcoind with C](15_1_Accessing_Bitcoind_with_C.md). You also need to initialize your library, connect your RPC client, and prepare your response object:
+Obviously, you're going to need to get all of your variables ready again, as discussed in [§15.1: Accessing Digitalcoind with C](15_1_Accessing_Digitalcoind_with_C.md). You also need to initialize your library, connect your RPC client, and prepare your response object:
 ```
 bitcoinrpc_global_init();
 rpc_client = bitcoinrpc_cl_init_params ("bitcoinrpc", "YOUR-RPC-PASSWD", "127.0.0.1", 18332);
@@ -338,10 +338,10 @@ Txid: b93b19396f8baa37f5f701c7ca59d3128144c943af5294aeb48e3eb4c30fa9d2
 ```
 You can see information on this transaction that we sent [here](https://live.blockcypher.com/btc-testnet/tx/b93b19396f8baa37f5f701c7ca59d3128144c943af5294aeb48e3eb4c30fa9d2/). 
 
-## Summary: Programming Bitcoind with C
+## Summary: Programming Digitalcoind with C
 
 With access to a C library, you can create much more fully featured programs than it was reasonable to do so with shell scripts. But, it can take a lot of work! Even at 316 lines of code, `sendtoaddress.c` doesn't cover nearly all of the intricacies requires to safely and intelligently transact bitcoins.
 
 ## What's Next?
 
-Learn more about "Talking to Bitcoind with C" in [15.3: Receiving Notifications in C with ZMQ Libraries](15_3_Receiving_Bitcoind_Notifications_with_C.md).
+Learn more about "Talking to Digitalcoind with C" in [15.3: Receiving Notifications in C with ZMQ Libraries](15_3_Receiving_Digitalcoind_Notifications_with_C.md).

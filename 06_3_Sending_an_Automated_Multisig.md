@@ -117,4 +117,4 @@ There's an easier way to resepend funds sent to multisig addresses that simply r
 
 ## What's Next?
 
-Learn more about "Expanding Digitalcoin Transactions" with [Chapter Seven: Expanding Digitalcoin Transactions with PSBTs](07_0_Expanding_Bitcoin_Transactions_PSBTs.md).
+Learn more about "Expanding Digitalcoin Transactions" with [Chapter Seven: Expanding Digitalcoin Transactions with PSBTs](07_0_Expanding_Digitalcoin_Transactions_PSBTs.md).

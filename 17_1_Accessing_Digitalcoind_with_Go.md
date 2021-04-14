@@ -1,4 +1,4 @@
-# 17.1: Accessing Bitcoind with Go
+# 17.1: Accessing Digitalcoind with Go
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
@@ -409,10 +409,10 @@ $ go run lookuptransaction.go
 }
 ```
 
-## Summary: Accessing Bitcoind with Go
+## Summary: Accessing Digitalcoind with Go
 
 Although the `btcd` `rpcclient` has some limits, you can still perform the main RPC commands in Go. The documentation for `rpcclient` is available on [Godoc](https://godoc.org/github.com/btcsuite/btcd/rpcclient). If the documentation doesn't have what you're looking for, also consult the [btcd repository](https://github.com/btcsuite/btcd). It is generally well documented and easy to read. Based on these examples you should be able to incorporate Digitalcoin in a Go project and do things like send and receive coins.
 
 ## What's Next?
 
-Learn more about "Talking to Digitalcoin in Other Languages" in [17.2: Accessing Digitalcoin with Java](17_2_Accessing_Bitcoind_with_Java.md).
+Learn more about "Talking to Digitalcoin in Other Languages" in [17.2: Accessing Digitalcoin with Java](17_2_Accessing_Digitalcoind_with_Java.md).

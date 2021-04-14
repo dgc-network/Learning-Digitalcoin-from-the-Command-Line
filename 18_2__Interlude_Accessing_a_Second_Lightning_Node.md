@@ -52,7 +52,7 @@ They can then tell you their `id` (`03240a4878a9a64aea6c3921a434e573845267b86e89
 
 ## Create a New c-lightning Node
 
-However, for testing purposes, you probably want to have a second node under you own control. The easiest way to do so is to create a second c-lightning node on a new machine, using either Digitalcoin Standup, per [§2.1](02_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md) or compiling it by hand, per [§18.1](18_1_Verifying_Your_Lightning_Setup.md).
+However, for testing purposes, you probably want to have a second node under you own control. The easiest way to do so is to create a second c-lightning node on a new machine, using either Digitalcoin Standup, per [§2.1](02_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md) or compiling it by hand, per [§18.1](18_1_Verifying_Your_Lightning_Setup.md).
 
 Once you have your node running, you can run `getinfo` to retrieve your information, as shown above.
 
@@ -60,7 +60,7 @@ Once you have your node running, you can run `getinfo` to retrieve your informat
 
 However, for our examples in the next chapter, we're instead going to create an LND node. This will allow us to demonstrate a bit of the depth of the Lightning ecosystem by showing how similar commands work on the two different platforms.
 
-One way to create an LND node is to run the Digitalcoin Standup Scripts again on a new machine, but this time to choose LND, per [§2.1](2_1_Setting_Up_a_Bitcoin-Core_VPS_with_StackScript.md).
+One way to create an LND node is to run the Digitalcoin Standup Scripts again on a new machine, but this time to choose LND, per [§2.1](2_1_Setting_Up_a_Digitalcoin-Core_VPS_with_StackScript.md).
 
 Another is to compile LND from source code on a machine where you'rea already running a Digitalcoin node, as follows.
 
@@ -111,7 +111,7 @@ $ sudo cp $GOPATH/bin/lnd $GOPATH/bin/lncli /usr/bin
 
 Unlike with c-lightning, you will need to create a default config file for LND.
 
-However first, you need to enable ZMQ on your Bitcoind, if you didn't already in [§15.3](15_3_Receiving_Bitcoind_Notifications_with_C.md).
+However first, you need to enable ZMQ on your Digitalcoind, if you didn't already in [§15.3](15_3_Receiving_Digitalcoind_Notifications_with_C.md).
 
 This requires adding the following to your `~/.digitalcoin/digitalcoin.conf` file if it's not already there:
 ```
@@ -161,7 +161,7 @@ debuglevel=debug
 digitalcoin.active=1
 digitalcoin.node=digitalcoind
 digitalcoin.testnet=true
-[Bitcoind]
+[Digitalcoind]
 digitalcoind.rpchost=localhost
 digitalcoind.rpcuser=$BITCOINRPC_USER
 digitalcoind.rpcpass=$BITCOINRPC_PASS

@@ -19,7 +19,7 @@ Supporting objectives include the ability to:
    
 ## Table of Contents
 
-   * [Section One: Creating a Partially Signed Digitalcoin Transaction](07_1_Creating_a_Partially_Signed_Bitcoin_Transaction.md)
-   * [Section Two: Using a Partially Signed Digitalcoin Transaction](07_2_Using_a_Partially_Signed_Bitcoin_Transaction.md)
+   * [Section One: Creating a Partially Signed Digitalcoin Transaction](07_1_Creating_a_Partially_Signed_Digitalcoin_Transaction.md)
+   * [Section Two: Using a Partially Signed Digitalcoin Transaction](07_2_Using_a_Partially_Signed_Digitalcoin_Transaction.md)
    * [Section Three: Integrating with Hardware Wallets](07_3_Integrating_with_Hardware_Wallets.md)
    

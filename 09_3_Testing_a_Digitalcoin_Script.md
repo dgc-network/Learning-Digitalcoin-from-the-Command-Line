@@ -196,7 +196,7 @@ Even with a great tool like `btcdeb` or transient resources like the various onl
 
 So the only way to _really_ test Digitalcoin Scripts is to try them out on Testnet.
 
-And how do you do that? As it happens that's the topic of [chapter 10](10_0_Embedding_Bitcoin_Scripts_in_P2SH_Transactions.md), which looks into introducing these abstract scripts to the real world of Digitalcoin by embedding them in P2SH transactions. (But even then, you will probably need an API to push your P2SH transaction onto the Digitalcoin network, so full testing will still be a ways in the future.)
+And how do you do that? As it happens that's the topic of [chapter 10](10_0_Embedding_Digitalcoin_Scripts_in_P2SH_Transactions.md), which looks into introducing these abstract scripts to the real world of Digitalcoin by embedding them in P2SH transactions. (But even then, you will probably need an API to push your P2SH transaction onto the Digitalcoin network, so full testing will still be a ways in the future.)
 
 _Whatever_ other testing methods you've used, testing a script on Testnet should be your final test _before_ you put your Script on Mainnet. Don't trust that your code is right; don't just eyeball it. Don't even trust whatever simulators or debuggers you've been using. Doing so is another great way to lose funds on Digitalcoin.
 
