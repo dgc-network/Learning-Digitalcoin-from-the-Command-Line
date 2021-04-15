@@ -461,7 +461,7 @@ Learn more about "Talking to Digitalcoin in Other Languages" in [17.5: Accessing
 
 ## Variant: Build Python from Source
 
-If you need to install Python 3 from source, follow these instructions, then continue with ["Creating a DigitalcoinRPC Project"](17_4_Accessing_Digitalcoind_with_Python.md#creating-a-bitcoinrpc-project).
+If you need to install Python 3 from source, follow these instructions, then continue with ["Creating a DigitalcoinRPC Project"](17_4_Accessing_Digitalcoind_with_Python.md#creating-a-digitalcoinrpc-project).
 
 ### 1. Install Dependencies
 ```sh
