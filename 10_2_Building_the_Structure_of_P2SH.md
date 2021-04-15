@@ -16,7 +16,7 @@ After you create a locking script, you need to serialize it before it can be inp
 
 Creating the hexcode that is necessary to serialize a script is both a simple translation and something that is complex enough that it goes beyond any shell script that you're likely to write. This step is one of the main reasons that you need an API to create P2SH transactions.
 
-You create hexcode by stepping through your locking script and turning each element into one-byte hex command, possibly followed by additional data, per the guide at the [Digitalcoin Wiki Script page](https://en.digitalcoin.it/wiki/Script):
+You create hexcode by stepping through your locking script and turning each element into one-byte hex command, possibly followed by additional data, per the guide at the [Bitcoin Wiki Script page](https://en.bitcoin.it/wiki/Script):
 
 * Operators are translated to the matching byte for that opcode
 * The constants 1-16 are translated to opcodes 0x51 to 0x61 (OP_1 to OP_16)
@@ -67,7 +67,7 @@ To complete your serialization, you translate the hexcode into binary. On the co
 
 ## Run The Integer Conversion Script
 
-A complete script for changing an integer between -2147483647 and 2147483647 to a little-endian signed-magnitude representation in hex can be found in th e[src code directory](src/10_2_integer2lehex.sh). You can download it as `integeer2lehex.sh`.
+A complete script for changing an integer between -2147483647 and 2147483647 to a little-endian signed-magnitude representation in hex can be found in the [src code directory](src/10_2_integer2lehex.sh). You can download it as `integeer2lehex.sh`.
 
 > :warning: **WARNING:** This script has not been robustly checked. If you are going to use it to create real locking scripts you should make sure to double-check and test your results.
 
@@ -96,7 +96,7 @@ To better understand this process, we will reverse-engineer the P2SH multisig th
 ```
 522102da2f10746e9778dd57bd0276a4f84101c4e0a711f9cfd9f09cde55acbdd2d1912102bfde48be4aa8f4bf76c570e98a8d287f9be5638412ab38dede8e78df82f33fa352ae
 ```
-You can translate this back to Script by hand using the [Digitalcoin Wiki Script page](https://en.digitalcoin.it/wiki/Script) as a reference. Just look at one byte (two hex characters) of data at a time, unless you're told to look at more by an OP_PUSHDATA command (an opcode in the range of 0x01 to 0x4e).
+You can translate this back to Script by hand using the [Bitcoin Wiki Script page](https://en.bitcoin.it/wiki/Script) as a reference. Just look at one byte (two hex characters) of data at a time, unless you're told to look at more by an OP_PUSHDATA command (an opcode in the range of 0x01 to 0x4e).
 
 The whole Script will break apart as follows:
 ```

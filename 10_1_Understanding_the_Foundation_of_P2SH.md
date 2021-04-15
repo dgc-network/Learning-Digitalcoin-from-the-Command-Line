@@ -77,7 +77,7 @@ An unlocking `scriptSig` for a P2SH transaction is formed as: `... data ... <red
 
 > :warning: **WARNING:** Though signatures are not a requirement, a P2SH script actually isn't very secure if it doesn't require at least one signature in its inputs. The reasons for this are described in [§13.1: Writing Puzzle Scripts](13_1_Writing_Puzzle_Scripts.md).
 
-When a UTXO is redeemed, it runs in two rounds of verification:
+When the UTXO is redeemed, it runs in two rounds of verification:
 
 1. First, the `redeemScript` in the `scriptSig` is hashed and compared to the hashed script in the `scriptPubKey`. 
 2. If they match, then a second round of verification begins.
