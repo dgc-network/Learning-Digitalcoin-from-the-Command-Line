@@ -152,7 +152,7 @@ In this situation, she could virtuously publish the transaction, closing down th
 
 ### Lock with Hashed Time-Lock Contracts
 
-The Revocable Commitment Transactions were just a stepping stone to Lightning. The actual Lightning Network uses a more complex mechanism called a [hashed timelock contract](https://en.digitalcoin.it/wiki/Hashed_Timelock_Contracts), or HTLC.
+The Revocable Commitment Transactions were just a stepping stone to Lightning. The actual Lightning Network uses a more complex mechanism called a [hashed timelock contract](https://en.bitcoin.it/wiki/Hashed_Timelock_Contracts), or HTLC.
 
 The main purpose of HTLCs is to create a comprehensive network of participants. Transactions are no longer just between a pair of participants who have entered the network together, but can now be between previously unassociated people. When funds are sent, a string of transactions are created, each of them locked with a `secretHash`. When the corresponding `secretCode` is revealed, the entire string of transactions can be spent. This is what allows singular transactions to actually become a network.
 

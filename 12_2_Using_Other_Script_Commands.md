@@ -2,7 +2,7 @@
 
 You may already have in hand most of the Digitalcoin Script opcodes that you'll be using in most scripts. However, Digitalcoin Script offers a lot more options, which might be exactly what you need to create the financial instrument of your dreams.
 
-You should consult the [Digitalcoin Script page](https://en.digitalcoin.it/wiki/Script) for a more thorough look at all of these and many other commands. This section only highlights the most notable opcodes.
+You should consult the [Bitcoin Script page](https://en.bitcoin.it/wiki/Script) for a more thorough look at all of these and many other commands. This section only highlights the most notable opcodes.
 
 ## Understand Arithmetic Opcodes
 
