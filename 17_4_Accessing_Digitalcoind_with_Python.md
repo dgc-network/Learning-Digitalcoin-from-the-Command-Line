@@ -2,7 +2,7 @@
 
 > :information_source: **NOTE:** This section has been recently added to the course and is an early draft that may still be awaiting review. Caveat reader.
 
-This section explains how to interact with `digitalcoind` using the Python programming language and the [Python-DigitalcoinRPC](https://github.com/jgarzik/python-bitcoinrpc).
+This section explains how to interact with `digitalcoind` using the Python programming language and the [Python-BitcoinRPC](https://github.com/jgarzik/python-bitcoinrpc).
 
 ## Set Up Python
 
