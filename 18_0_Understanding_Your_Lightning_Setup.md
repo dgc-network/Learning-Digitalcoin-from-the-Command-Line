@@ -10,7 +10,7 @@ After working through this chapter, a developer will be able to:
 
    * Assess that a c-lightning Node is Installed and Up-to-date
    * Perform Basic Lightning Wallet Commands
-   * Create a LIghtning Channel
+   * Create a Lightning Channel
    
 Supporting objectives include the ability to:
 
