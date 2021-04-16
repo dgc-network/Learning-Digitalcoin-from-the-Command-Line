@@ -62,7 +62,7 @@ $ digitalcoin-cli listunspent
 ```
 This listing shows three different UTXOs, worth .0001, .0005 and .00022 DGC. Note that each has its own distinct txid and remains distinct in the wallet, even the last two, which were sent to the same address.
 
-When you want to spend a UTXO, it's not sufficient to just know the transaction id. That's because each transaction can have multiple outputs! Remember that first chunk of money that the faucet sent us? In the transaction, some money went to us and some went to someone else. The `txid` refers to the overall transaction, while a `vout` says which of multiple outputs you've received. In this list, each of these transactions is the 0th `vout` of a previous transaction, but _that doesn't have to be the case_.
+When you want to spend the UTXO, it's not sufficient to just know the transaction id. That's because each transaction can have multiple outputs! Remember that first chunk of money that the faucet sent us? In the transaction, some money went to us and some went to someone else. The `txid` refers to the overall transaction, while a `vout` says which of multiple outputs you've received. In this list, each of these transactions is the 0th `vout` of a previous transaction, but _that doesn't have to be the case_.
 
 So, txid+vout=UTXO. This will be the foundation of any raw transaction.
 
