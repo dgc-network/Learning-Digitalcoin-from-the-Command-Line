@@ -11,7 +11,7 @@ In this section, you'll install and verify c-lightning, your utility for accessi
 
 ## Install C-Lightning
 
-If you reference to the [Bitcoin Standup Scripts](https://github.com/BlockchainCommons/Bitcoin-Standup-Scripts), you may have already installed Lightning at the beginning of this course. You can test this by seeing if `lightningd` is running:
+If you has referenced to the [Bitcoin Standup Scripts](https://github.com/BlockchainCommons/Bitcoin-Standup-Scripts), you may have already installed Lightning at the beginning of this course. You can test this by seeing if `lightningd` is running:
 ```
 $ ps auxww | grep -i lightning
 standup  31213  0.0  0.2  24144 10424 pts/0    S    15:38   0:00 lightningd --testnet
