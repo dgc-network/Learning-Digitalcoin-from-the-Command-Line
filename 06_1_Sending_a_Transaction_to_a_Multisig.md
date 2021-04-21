@@ -133,7 +133,7 @@ standup@btctest20:~$ digitalcoin-cli -named createmultisig nrequired=2 keys='''[
 ```
 More notably, each ordering creates a different _redeemScript_. That means that if you used these basic techniques and failed to save the redeemScript as you were instructed, you'll have to walk through an ever-increasing number of variations to find the right one when you try and spend your funds!
 
-[BIP67](https://github.com/digitalcoin/bips/blob/master/bip-0067.mediawiki) suggests a way to lexicographically order keys, so that they always generate the same multisignatures. ColdCard and Electrum are among the wallets that already support this. Of course, this can cause troubles on its own if you don't know if a multisig address was created with sorted or unsorted keys. Once more, [descriptors](03_5_Understanding_the_Descriptor.md) come to the rescue. If a multisig is unsorted, it's built with the function `multi` and if it's sorted it's built with the function `sortedmulti`.
+[BIP67](https://github.com/bitcoin/bips/blob/master/bip-0067.mediawiki) suggests a way to lexicographically order keys, so that they always generate the same multisignatures. ColdCard and Electrum are among the wallets that already support this. Of course, this can cause troubles on its own if you don't know if a multisig address was created with sorted or unsorted keys. Once more, [descriptors](03_5_Understanding_the_Descriptor.md) come to the rescue. If a multisig is unsorted, it's built with the function `multi` and if it's sorted it's built with the function `sortedmulti`.
 
 If you look at the `desc`riptor for the multisig that you created above, you'll see that Digitalcoin Core doesn't currently sort its multisigs:
 ```
