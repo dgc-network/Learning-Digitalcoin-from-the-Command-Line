@@ -52,7 +52,7 @@ If you prefer, you can _always_ opt in for RBF. Do so by running your `digitalco
 
 ## Understand How RBF Works
 
-The RBF functionality is based on [BIP 125](https://github.com/digitalcoin/bips/blob/master/bip-0125.mediawiki), which lists the following rules for using RBF:
+The RBF functionality is based on [BIP 125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki), which lists the following rules for using RBF:
 
 > 1. The original transactions signal replaceability explicitly or through inheritance as described in the above Summary section.
 
