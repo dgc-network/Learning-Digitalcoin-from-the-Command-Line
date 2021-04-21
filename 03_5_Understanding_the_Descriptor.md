@@ -10,7 +10,7 @@ You may have noticed a weird `desc:` field in the `listunspent` command of the p
 
 Most of this course presumes that you're working entirely from a single node where you manage your own wallet, sending and receiving payments with the addresses created by that wallet. However, that's not necessarily how the larger Digitalcoin ecosystem works. There, you're more likely to be moving addresses between wallets and even setting up wallets to watch over funds controlled by different wallets. 
 
-That's where descriptors come in. They're most useful if you're interacting with software _other_ than Digitalcoin Core, and really need to lean on this sort of compatibility function: see [§6.1](https://github.com/BlockchainCommons/Learning-Digitalcoin-from-the-Command-Line/blob/master/06_1_Sending_a_Transaction_to_a_Multisig.md) for a real-world example of how having the capability of descriptors is critical.
+That's where descriptors come in. They're most useful if you're interacting with software _other_ than Digitalcoin Core, and really need to lean on this sort of compatibility function: see [§6.1](06_1_Sending_a_Transaction_to_a_Multisig.md) for a real-world example of how having the capability of descriptors is critical.
 
 Moving addresses between wallets used to focus on `xpub` and `xprv`, and those are still supported. 
 
@@ -20,13 +20,13 @@ Moving addresses between wallets used to focus on `xpub` and `xprv`, and those a
 
 The fact that you can have a "whole sequence of children ... keys" reveals the fact that "xpub" and "xprv" aren't standard keys like we've been talking about so far. They're instead hierarchical keys that can be used to create whole families of keys, built on the idea of HD Wallets.
 
-> :book: ***What is an HD Wallet?*** Most modern wallets are built on [BIP32: Hierarchical Deterministic Wallets](https://github.com/digitalcoin/bips/blob/master/bip-0032.mediawiki). This is a hierarchical design where a single seed can be used to generate a whole sequence of keys. The entire wallet may then be restored from that seed, rather than requiring the restoring of every single private key.
+> :book: ***What is an HD Wallet?*** Most modern wallets are built on [BIP32: Hierarchical Deterministic Wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki). This is a hierarchical design where a single seed can be used to generate a whole sequence of keys. The entire wallet may then be restored from that seed, rather than requiring the restoring of every single private key.
 
 > :book: ***What is a Derivation Path?*** When you have hierarchical keys, you need to be able to define individual keys as descendents of a seed. For example `[0]` is the 0th key, `[0/1]` is the first son of the 0th key, `[1/0/1]` is the first grandson of the zeroth son of the 1st key. Some keys also contain a `'` after the number, to show they're hardened, which protects them from a specific attack that can be used to derive an `xprv` from an `xpub`. You don't need to worry about the specifics, other than the fact that those `'`s will cause you formatting troubles when working from the command line.
 
 > :information_source: **NOTE:** a derivation path defines a key, which means that a key represents a derivation path. They're equivalent. In the case of a descriptor, the derivation path lets `digitalcoind` know where the key that follows in the descriptor came from!
 
-`xpubs` and `xprvs` proved insufficient when the types of public keys multiplied under the [SegWit expansion](https://github.com/BlockchainCommons/Learning-Digitalcoin-from-the-Command-Line/blob/master/04_6_Creating_a_Segwit_Transaction.md), thus the need for "output descriptors".
+`xpubs` and `xprvs` proved insufficient when the types of public keys multiplied under the [SegWit expansion](04_6_Creating_a_Segwit_Transaction.md), thus the need for "output descriptors".
 
 > :book: ***What is an output descriptor?*** A precise description of how to derive a Digitalcoin address from a combination of a function and one or more inputs to that function.
 
@@ -73,7 +73,7 @@ Here's what that all means:
 * **Key**. The key or keys that are being transferred. This could be something traditional like an `xpub` or `xprv`, it could just be a public key for an address as in this case, it could be a set of addresses for a multi-signature, or it could be something else. This is the core data: the function explains what to do with it.
 * **Checksum**. Descriptors are meant to be human transferrable. This checksum makes sure you got it right.
 
-See [Digitalcoin Core's Info on Descriptor Support](https://github.com/digitalcoin/digitalcoin/blob/master/doc/descriptors.md) for more information.
+See [Bitcoin Core's Info on Descriptor Support](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md) for more information.
 
 ## Examine a Descriptor
 
