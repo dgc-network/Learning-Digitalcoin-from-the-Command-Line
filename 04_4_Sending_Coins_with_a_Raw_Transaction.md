@@ -30,7 +30,6 @@ We're going to use our 0th and 2nd UTXOs:
 ```
 $ digitalcoin-cli listunspent
 [
-[
   {
     "txid": "0619fecf6b2668fab1308fbd7b291ac210932602a6ac6b8cc11c7ae22c43701e",
     "vout": 1,
