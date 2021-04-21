@@ -136,7 +136,7 @@ $ digitalcoin-cli -named decodepsbt psbt=$psbt
   ]
 }
 ```
-It's important to note that even though we've defined the fundamentals of the transaction: the `vins` of where the money is coming from and the `vouts` of where it's going to, we haven't yet defined the `inputs` and `outputs` that are the heart of a PSBT and that are required for offline users to assess them. This is expected: the role of the Creator as defined in [BIP174](https://github.com/digitalcoin/bips/blob/master/bip-0174.mediawiki) is to outline the transaction, while the role of the Updater is to start filling in the PSBT-specific data. (Other commands combine the Creator and Updater roles, but `createpsbt` doesn't because it doesn't have access to your wallet.)
+It's important to note that even though we've defined the fundamentals of the transaction: the `vins` of where the money is coming from and the `vouts` of where it's going to, we haven't yet defined the `inputs` and `outputs` that are the heart of a PSBT and that are required for offline users to assess them. This is expected: the role of the Creator as defined in [BIP174](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) is to outline the transaction, while the role of the Updater is to start filling in the PSBT-specific data. (Other commands combine the Creator and Updater roles, but `createpsbt` doesn't because it doesn't have access to your wallet.)
 
 You can also use the `analyzepsbt` command to look at its current state:
 ```
