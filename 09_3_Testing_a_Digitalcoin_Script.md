@@ -6,12 +6,12 @@ This chapter thus describes a prime method for testing Digitalcoin Scripts, whic
 
 ## Install btcdeb
 
-The Digitalcoin Script Debugger (`btcdeb`) by @kallewoof is one of the most reliable methods we've found for debugging Digitalcoin Scripts. It does, however, require setting up C++ and a few other accessories on your machine, so we'll also offer a few other options toward the end of this chapter.
+The Bitcoin Script Debugger (`btcdeb`) by @kallewoof is one of the most reliable methods we've found for debugging Digitalcoin Scripts. It does, however, require setting up C++ and a few other accessories on your machine, so we'll also offer a few other options toward the end of this chapter.
 
 First, you need to clone the `btcdeb` GitHub repository, which will also require installing `git` if you don't yet have it.
 ```
 $ sudo apt-get install git
-$ git clone https://github.com/digitalcoin-core/btcdeb.git
+$ git clone https://github.com/bitcoin-core/btcdeb.git
 ```
 Note that when you run `git clone` it will copy `btcdeb` into your current directory. We've chosen to do so in our `~standup` directory.
 ```
@@ -186,7 +186,7 @@ Using these commands can make it easier to see what's going on and where you are
 
 There are also a few web simulators that you can use to test scripts online. They can be superior to a command-line tool by offering a more graphical output, but we also find that they tend to have shortcomings.
 
-In the past we've tried to give extensive guidelines on using sites such as the [Script Playground](http://www.crmarsh.com/script-playground/) or the [Digitalcoin Online Script Debugger](https://digitalcoin-script-debugger.visvirial.com/), but they become out of date and/or disappear too quickly to keep up with them.
+In the past we've tried to give extensive guidelines on using sites such as the [Script Playground](http://www.crmarsh.com/script-playground/) or the [Bitcoin Online Script Debugger](https://bitcoin-script-debugger.visvirial.com/), but they become out of date and/or disappear too quickly to keep up with them.
 
 Assume that these debuggers have the nice advantage of showing things visually and explicitly telling you whether a script succeeds (unlocks) or fails (stays locked). Assume that they have disadvantages with signatures, where many of them either always return `true` for signature tests or else have very cumbersome mechanisms for incorporating them.
 
